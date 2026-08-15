@@ -1,0 +1,47 @@
+version: pair_feature_v013
+status: APPROVED_FOR_CALENDAR_V013_BUILD
+track: PAIR
+input_dataset: dataset_v012
+input_run_id: CURRENT_DATASET_POINTER
+output_grain:
+- forecast_origin
+- target_month
+- horizon
+- base_sku
+- branch_code
+lag_convention: target_relative
+missing_unknown_fill_zero: false
+negative_only_fill_zero: false
+unseen_pair_rows: false
+windows:
+- 3
+- 6
+- 12
+lags:
+- 1
+- 2
+- 3
+- 6
+- 12
+semantics:
+  peak_positive_to_origin:
+    before_first_positive: null
+    after_first_positive: carry_forward_historical_max
+  peak_share_to_origin:
+    before_first_positive: null
+    after_first_positive: historical_peak_divided_by_cumulative_positive_sum
+families:
+  pair_history: true
+  demand_state_diagnostics: true
+  sku_cross_branch: true
+  branch_tile_size: true
+  target_calendar_safe: true
+  branch_channel_snapshot_direct: false
+  factory_sku_family: false
+  sale_sku_family: false
+  replacement_demand_transfer: false
+  target_lunar_tet_calendar: true
+  target_calendar_v013_workdays_public_holidays: true
+feature_version: pair_feature_v013
+calendar_feature_contract: calendar_feature_contract_v02
+closed_known_pair_missing_sales_row_is_zero: true

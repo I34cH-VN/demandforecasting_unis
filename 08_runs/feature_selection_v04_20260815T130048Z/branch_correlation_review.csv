@@ -1,0 +1,3 @@
+feature_a,feature_b,abs_corr
+branch_history_length_months,branch_observed_month_count_to_origin,1.0
+target_lunar_month_mid,target_days_to_next_tet_from_midmonth,0.9952334735472423

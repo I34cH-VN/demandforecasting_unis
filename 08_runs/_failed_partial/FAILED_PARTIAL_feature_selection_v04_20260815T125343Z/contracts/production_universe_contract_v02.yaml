@@ -1,0 +1,27 @@
+version: production_universe_contract_v02
+primary_grain: base_sku_x_branch_x_month
+train:
+  current_status_filter: false
+  current_status_rewrites_history: false
+validation_primary:
+  pair:
+    require_known_pair_asof_origin: true
+    require_base_current_active: true
+    require_branch_current_active: true
+  branch:
+    require_branch_current_active: true
+validation_secondary:
+  current_status_filter: false
+  diagnostic_only: true
+future_test_and_production:
+  pair:
+    require_known_pair_asof_origin: true
+    require_base_current_active: true
+    require_branch_current_active: true
+    allow_unseen_pair: false
+  branch:
+    require_branch_current_active: true
+status_semantics:
+  snapshot_only: true
+  historical_effective_dating_available: false
+  use_as_predictive_feature: false

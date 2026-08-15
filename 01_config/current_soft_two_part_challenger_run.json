@@ -1,0 +1,12 @@
+{
+  "run_id": "soft_two_part_challenger_v01_20260815T145347Z",
+  "status": "PASS",
+  "challenger_version": "soft_two_part_challenger_v01",
+  "source_rolling_run_id": "rolling_backtest_v01_20260815T132319Z",
+  "source_diagnosis_run_id": "underforecast_diagnosis_v01_20260815T140720Z",
+  "reference_model": "lightgbm_tweedie",
+  "challenger_model": "soft_two_part_expected",
+  "report_dir": "/content/drive/MyDrive/work9/06_reports/soft_two_part_challenger/soft_two_part_challenger_v01_20260815T145347Z",
+  "manifest_path": "/content/drive/MyDrive/work9/06_reports/soft_two_part_challenger/soft_two_part_challenger_v01_20260815T145347Z/soft_two_part_manifest.json",
+  "decision_review_path": "/content/drive/MyDrive/work9/06_reports/soft_two_part_challenger/soft_two_part_challenger_v01_20260815T145347Z/soft_two_part_decision_review.json"
+}

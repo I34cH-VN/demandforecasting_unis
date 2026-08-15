@@ -1,0 +1,87 @@
+version: feature_selection_v04
+status: READY_TO_RUN_WORK9
+source_dataset: dataset_v012
+pair_feature_version: pair_feature_v013
+branch_feature_version: branch_feature_v013
+data_scope:
+  train_target_end: '2025-12-01'
+  official_validation_origin: '2025-12-01'
+  official_validation_targets:
+  - '2026-01-01'
+  - '2026-02-01'
+  - '2026-03-01'
+  frozen_test_start: '2026-04-01'
+  frozen_test_allowed: false
+static_screen:
+  missing_rate_drop: 0.95
+  drop_constant: true
+  drop_exact_duplicate: true
+  correlation_review_threshold: 0.995
+  correlation_auto_drop: false
+screening_estimator:
+  family: HistGradientBoostingRegressor
+  persisted: false
+  candidate_model: false
+  early_stopping: false
+  max_iter: 160
+  learning_rate: 0.06
+  max_leaf_nodes: 31
+  l2_regularization: 1.0
+  random_state: 42
+  pair_max_train_rows: 180000
+  branch_max_train_rows: 10000
+importance:
+  method: permutation_importance
+  scoring: negative_wape
+  repeats: 2
+  scopes:
+  - ALL
+  - h1
+  - h2
+  - h3
+  minimum_wape_gain: 0.0005
+selection:
+  pair_min_features: 12
+  branch_min_features: 8
+  horizon_mandatory_for_pooled: true
+outputs_status: CANDIDATE_AFTER_RERUN
+calendar_patch:
+  required_candidates:
+  - target_month_num
+  - target_quarter
+  - target_year
+  - target_days_in_month
+  - target_month_sin
+  - target_month_cos
+  - target_weekday_count
+  - target_public_holiday_event_count
+  - target_statutory_holiday_nominal_days
+  - target_working_days_proxy
+  - target_lunar_month_mid
+  - target_lunar_month_mid_is_leap
+  - target_lunar_month_sin
+  - target_lunar_month_cos
+  - target_tet_day_of_month
+  - target_days_to_next_tet_from_midmonth
+  - target_days_since_prev_tet_from_midmonth
+  - target_is_tet_month
+  - target_is_pre_tet_month
+  - target_is_post_tet_month
+  force_selection: false
+  reason: Evaluate Calendar V0.1.3 fields under exactly the locked Stage-6 screening/importance
+    rules; no calendar field is force-selected.
+source_feature_pointer: 01_config/current_feature_run.json
+validation_policy:
+  primary: CURRENT_ACTIVE_PORTFOLIO
+  pair_require:
+  - official_validation_mask
+  - target_available
+  - current_production_forecast_mask
+  - known_pair_asof_origin
+  branch_require:
+  - official_validation_mask
+  - target_available
+  - current_production_forecast_mask
+  secondary: ALL_OFFICIAL_VALIDATION_DIAGNOSTIC_ONLY
+  selection_uses: PRIMARY_ONLY
+  current_status_predictive_feature: false

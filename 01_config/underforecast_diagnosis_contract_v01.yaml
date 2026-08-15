@@ -1,0 +1,65 @@
+version: underforecast_diagnosis_contract_v01
+status: DIAGNOSIS_ONLY
+primary_grain: base_sku_x_branch_x_month
+core_model: lightgbm_tweedie
+prediction_column: pred_lightgbm_tweedie
+target: target_actual_gross_m2
+lineage:
+  required_backtest_version: rolling_backtest_v01
+  required_backtest_status: PASS
+  source_run_resolution: current_rolling_backtest_run.json
+purpose:
+- explain systematic underforecast before frozen test
+- test whether error is concentrated in demand gaps, reactivation or spikes
+- quantify whether integer M2 rounding changes business metrics materially
+- do not tune or retrain the model in this stage
+event_rules:
+  medium_gap_months: 3
+  long_gap_months: 6
+  moderate_spike_ratio: 2.0
+  extreme_spike_ratio: 3.0
+  min_spike_actual_m2: 1.0
+  precedence:
+  - actual_zero
+  - first_positive_known_pair
+  - reactivation_gap_6plus
+  - reactivation_gap_3_5
+  - reactivation_gap_1_2
+  - spike_3x_plus
+  - spike_2x_3x
+  - ongoing_positive
+rounding:
+  actual_target_rounding_allowed: false
+  training_rounding_allowed: false
+  forecast_output_policies_to_compare:
+  - raw
+  - round_nearest_1m2
+  - ceil_1m2
+  evaluate_pair_month: true
+  evaluate_complete_3m: true
+  aggregate_levels:
+  - PAIR_3M
+  - BASE_SKU_3M
+  - BRANCH_3M
+  - PORTFOLIO_3M
+  compare_round_before_aggregation: true
+  compare_round_after_aggregation: true
+  preferred_if_integer_display_required: round_after_aggregation
+  note: Ceil at every Pair-month can mechanically add positive volume and may hide
+    underforecast. Therefore raw continuous M2 remains the canonical model metric
+    unless business pack-size metadata later defines a valid sales quantum.
+outputs:
+- underforecast_diagnosis.csv
+- underforecast_by_origin_event.csv
+- rounding_pair_month_comparison.csv
+- rounding_3m_comparison.csv
+- actual_m2_granularity_summary.csv
+- actual_m2_fraction_frequency.csv
+- diagnosis_manifest.json
+safety:
+  supabase_write_allowed: false
+  frozen_test_allowed: false
+  model_retraining_allowed: false
+  calibration_allowed: false
+  model_freeze_allowed: false
+  production_publish_allowed: false

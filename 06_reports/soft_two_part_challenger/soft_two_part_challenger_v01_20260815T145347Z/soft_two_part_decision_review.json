@@ -1,0 +1,77 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "auto_promote": false,
+  "auto_freeze": false,
+  "metrics": {
+    "monthly_wape": {
+      "lightgbm_reference": 1.0097204563712923,
+      "soft_two_part_expected": 1.003091245508153
+    },
+    "monthly_bias_ratio": {
+      "lightgbm_reference": -0.19194919605405938,
+      "soft_two_part_expected": -0.1768771592211498
+    },
+    "cumulative_3m_pair": {
+      "lightgbm_reference": {
+        "wape_3m": 0.7777062747967908,
+        "bias_ratio_3m": -0.18851185624540298
+      },
+      "soft_two_part_expected": {
+        "wape_3m": 0.7688392220320148,
+        "bias_ratio_3m": -0.17209010649437992
+      }
+    },
+    "cumulative_3m_base_sku": {
+      "lightgbm_reference": {
+        "wape_3m": 0.44757549114750866,
+        "bias_ratio_3m": -0.18851185624540295
+      },
+      "soft_two_part_expected": {
+        "wape_3m": 0.4404366558769656,
+        "bias_ratio_3m": -0.17209010649437995
+      }
+    },
+    "cumulative_3m_branch": {
+      "lightgbm_reference": {
+        "wape_3m": 0.309997821623723,
+        "bias_ratio_3m": -0.18851185624540295
+      },
+      "soft_two_part_expected": {
+        "wape_3m": 0.29133815626654214,
+        "bias_ratio_3m": -0.17209010649437995
+      }
+    },
+    "cumulative_3m_portfolio": {
+      "lightgbm_reference": {
+        "wape_3m": 0.1933249381192616,
+        "bias_ratio_3m": -0.18851185624540295
+      },
+      "soft_two_part_expected": {
+        "wape_3m": 0.1850135358573273,
+        "bias_ratio_3m": -0.17209010649437995
+      }
+    },
+    "zero_forecast_sum_m2": {
+      "lightgbm_reference": 4874809.372251396,
+      "soft_two_part_expected": 4879758.96039451
+    },
+    "positive_wape": {
+      "lightgbm_reference": 0.7291063103266173,
+      "soft_two_part_expected": 0.7221921807427673
+    },
+    "positive_bias_ratio": {
+      "lightgbm_reference": -0.47256334209873363,
+      "soft_two_part_expected": -0.4577762239865352
+    },
+    "pair_revision_ratio": {
+      "H2_TO_H1": {
+        "lightgbm_reference": 0.4127580530329183,
+        "soft_two_part_expected": 0.427257286115049
+      },
+      "H3_TO_H2": {
+        "lightgbm_reference": 0.3613526970040952,
+        "soft_two_part_expected": 0.35886330469572547
+      }
+    }
+  }
+}

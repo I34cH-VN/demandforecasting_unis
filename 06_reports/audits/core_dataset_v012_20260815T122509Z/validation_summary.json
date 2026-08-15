@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "checks": {
+    "bridge_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "dim_base_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "dim_branch_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "fact_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "calendar_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "fact_base_subset_dim": {
+      "pass": true,
+      "detail": null
+    },
+    "gross_nonnegative": {
+      "pass": true,
+      "detail": null
+    },
+    "negative_nonpositive": {
+      "pass": true,
+      "detail": null
+    },
+    "implicit_missing_pair_is_observed_zero": {
+      "pass": true,
+      "detail": null
+    },
+    "dense_branch_month_is_observed": {
+      "pass": true,
+      "detail": null
+    },
+    "negative_only_target_unavailable": {
+      "pass": true,
+      "detail": null
+    },
+    "first_positive_origin_safe": {
+      "pass": true,
+      "detail": null
+    },
+    "positive_quantity_reconciles": {
+      "pass": true,
+      "detail": {
+        "source": 18606254.849999998,
+        "fact": 18606254.849999998
+      }
+    },
+    "negative_quantity_reconciles": {
+      "pass": true,
+      "detail": {
+        "source": -120778.40999999999,
+        "fact": -120778.41
+      }
+    }
+  }
+}

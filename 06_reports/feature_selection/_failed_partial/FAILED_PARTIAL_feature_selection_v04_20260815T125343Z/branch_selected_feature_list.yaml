@@ -1,0 +1,45 @@
+version: feature_selection_v04
+track: BRANCH
+source_feature_run_id: feature_stage_v013_20260815T123431Z
+selection_run_id: feature_selection_v04_20260815T125343Z
+status: CANDIDATE_PENDING_AUDIT
+selected_features:
+  - branch_roll_3_mean
+  - branch_positive_pair_count_roll_3_mean
+  - branch_roll_12_mean
+  - branch_new_positive_pair_count_roll_3_mean
+  - branch_roll_6_mean
+  - branch_pair_top5_share_lag_1
+  - branch_roll_12_sum
+  - branch_average_m2_per_positive_pair_lag_1
+  - branch_lag_1
+  - target_statutory_holiday_nominal_days
+  - branch_lag_2
+  - branch_pair_top10_share_lag_1
+  - branch_history_length_months
+  - target_working_days_proxy
+  - branch_observed_pair_count_lag_1
+  - branch_roll_3_std
+  - branch_reactivated_pair_count_lag_1
+  - target_lunar_month_sin
+  - branch_roll_6_sum
+  - branch_positive_pair_count_lag_1
+  - target_month_num
+  - branch_new_positive_pair_count_lag_1
+  - branch_roll_12_std
+  - branch_pair_hhi_lag_1
+  - branch_positive_month_count_to_origin
+  - branch_lag_3
+  - branch_roll_3_sum
+  - target_days_since_prev_tet_from_midmonth
+  - target_lunar_month_mid
+  - branch_negative_only_pair_count_lag_1
+  - target_month_sin
+  - target_days_to_next_tet_from_midmonth
+  - horizon
+  - branch_roll_6_std
+  - branch_explicit_zero_pair_count_lag_1
+stage7_notes:
+  pooled_model_requires_horizon: true
+  direct_per_horizon_model_may_drop_horizon_as_constant: true
+  frozen_test_used: false

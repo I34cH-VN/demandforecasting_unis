@@ -1,0 +1,2651 @@
+{
+  "run_id": "rolling_backtest_v01_20260815T132319Z",
+  "run_type": "ROLLING_ORIGIN_BACKTEST_V01",
+  "status": "PASS",
+  "backtest_version": "rolling_backtest_v01",
+  "source_model_candidate_version": "pair_modeling_v02",
+  "origins": [
+    "2025-01-01",
+    "2025-02-01",
+    "2025-03-01",
+    "2025-04-01",
+    "2025-05-01",
+    "2025-06-01",
+    "2025-07-01",
+    "2025-08-01",
+    "2025-09-01",
+    "2025-10-01",
+    "2025-11-01",
+    "2025-12-01"
+  ],
+  "n_origins": 12,
+  "feature_parity": {
+    "parity_origin": "2025-12-01",
+    "rolling_rows": 78864,
+    "canonical_rows": 78864,
+    "pass": true,
+    "mismatch_columns": []
+  },
+  "evaluation_rows": 420846,
+  "calibration_rows": 1047925,
+  "cumulative_3m_coverage": {
+    "pair_origin_total": 142815,
+    "pair_origin_complete_h1_h2_h3": 135448,
+    "pair_origin_incomplete": 7367,
+    "complete_rate": 0.9484157826558834
+  },
+  "revision_evaluable": true,
+  "revision_rows": 2007256,
+  "devices": [
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 113
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 174
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 167
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 91
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 222
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 164
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 81
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 122
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 97
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 84
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 118
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 190
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 87
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 67
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 210
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 80
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 67
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 121
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 74
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 103
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 198
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 70
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 53
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 160
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 80
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 53
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 97
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 82
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 240
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 188
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 84
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 71
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 148
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 78
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 57
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 113
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 96
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 152
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 168
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 79
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 114
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 160
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 102
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 140
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 173
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 119
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 260
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 155
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 98
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 132
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 149
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 98
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 187
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 150
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 116
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 318
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 132
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 92
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 150
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 106
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 106
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 112
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 114
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 120
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 284
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 129
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 95
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 256
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 110
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 110
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 650
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 113
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 132
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 363
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 221
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 145
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 411
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 126
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 138
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 353
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 165
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 136
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 400
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 275
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 131
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 305
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 245
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 150
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 667
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 176
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 110
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 383
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 274
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 127
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 281
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 313
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 129
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 217
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 183
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 109
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 581
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 252
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 128
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 361
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 219
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie",
+      "phase": "final_refit",
+      "n_estimators": 159
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence",
+      "phase": "final_refit",
+      "n_estimators": 357
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "gpu",
+      "actual": "gpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "candidate": "hurdle_positive",
+      "phase": "final_refit",
+      "n_estimators": 188
+    }
+  ],
+  "origin_audits": [
+    {
+      "origin": "2025-01-01",
+      "calibration_start_target_month": "2024-11-01",
+      "fit_rows": 243649,
+      "calibration_rows": 53475,
+      "evaluation_rows": 22201,
+      "horizon_rows": {
+        "H1": {
+          "fit": 95870,
+          "calibration": 19421,
+          "evaluation": 7410,
+          "hurdle_threshold": 0.65
+        },
+        "H2": {
+          "fit": 81051,
+          "calibration": 17796,
+          "evaluation": 7397,
+          "hurdle_threshold": 0.7
+        },
+        "H3": {
+          "fit": 66728,
+          "calibration": 16258,
+          "evaluation": 7394,
+          "hurdle_threshold": 0.55
+        }
+      }
+    },
+    {
+      "origin": "2025-02-01",
+      "calibration_start_target_month": "2024-12-01",
+      "fit_rows": 288597,
+      "calibration_rows": 58357,
+      "evaluation_rows": 23690,
+      "horizon_rows": {
+        "H1": {
+          "fit": 111586,
+          "calibration": 20823,
+          "evaluation": 7911,
+          "hurdle_threshold": 0.75
+        },
+        "H2": {
+          "fit": 96014,
+          "calibration": 19582,
+          "evaluation": 7904,
+          "hurdle_threshold": 0.95
+        },
+        "H3": {
+          "fit": 80997,
+          "calibration": 17952,
+          "evaluation": 7875,
+          "hurdle_threshold": 0.95
+        }
+      }
+    },
+    {
+      "origin": "2025-03-01",
+      "calibration_start_target_month": "2025-01-01",
+      "fit_rows": 335649,
+      "calibration_rows": 62921,
+      "evaluation_rows": 26773,
+      "horizon_rows": {
+        "H1": {
+          "fit": 128040,
+          "calibration": 22156,
+          "evaluation": 8952,
+          "hurdle_threshold": 0.8
+        },
+        "H2": {
+          "fit": 111692,
+          "calibration": 21004,
+          "evaluation": 8918,
+          "hurdle_threshold": 0.75
+        },
+        "H3": {
+          "fit": 95917,
+          "calibration": 19761,
+          "evaluation": 8903,
+          "hurdle_threshold": 0.8
+        }
+      }
+    },
+    {
+      "origin": "2025-04-01",
+      "calibration_start_target_month": "2025-02-01",
+      "fit_rows": 383851,
+      "calibration_rows": 68170,
+      "evaluation_rows": 30075,
+      "horizon_rows": {
+        "H1": {
+          "fit": 144753,
+          "calibration": 24273,
+          "evaluation": 10025,
+          "hurdle_threshold": 0.75
+        },
+        "H2": {
+          "fit": 127806,
+          "calibration": 22540,
+          "evaluation": 10017,
+          "hurdle_threshold": 0.75
+        },
+        "H3": {
+          "fit": 111292,
+          "calibration": 21357,
+          "evaluation": 10033,
+          "hurdle_threshold": 0.65
+        }
+      }
+    },
+    {
+      "origin": "2025-05-01",
+      "calibration_start_target_month": "2025-03-01",
+      "fit_rows": 435696,
+      "calibration_rows": 73603,
+      "evaluation_rows": 33554,
+      "horizon_rows": {
+        "H1": {
+          "fit": 162391,
+          "calibration": 26888,
+          "evaluation": 11191,
+          "hurdle_threshold": 0.75
+        },
+        "H2": {
+          "fit": 145231,
+          "calibration": 24219,
+          "evaluation": 11189,
+          "hurdle_threshold": 0.6
+        },
+        "H3": {
+          "fit": 128074,
+          "calibration": 22496,
+          "evaluation": 11174,
+          "hurdle_threshold": 0.6
+        }
+      }
+    },
+    {
+      "origin": "2025-06-01",
+      "calibration_start_target_month": "2025-04-01",
+      "fit_rows": 488894,
+      "calibration_rows": 81179,
+      "evaluation_rows": 35700,
+      "horizon_rows": {
+        "H1": {
+          "fit": 180579,
+          "calibration": 30168,
+          "evaluation": 11907,
+          "hurdle_threshold": 0.7
+        },
+        "H2": {
+          "fit": 162842,
+          "calibration": 26839,
+          "evaluation": 11895,
+          "hurdle_threshold": 0.8
+        },
+        "H3": {
+          "fit": 145473,
+          "calibration": 24172,
+          "evaluation": 11898,
+          "hurdle_threshold": 0.7
+        }
+      }
+    },
+    {
+      "origin": "2025-07-01",
+      "calibration_start_target_month": "2025-05-01",
+      "fit_rows": 543986,
+      "calibration_rows": 90058,
+      "evaluation_rows": 37974,
+      "horizon_rows": {
+        "H1": {
+          "fit": 199904,
+          "calibration": 33123,
+          "evaluation": 12641,
+          "hurdle_threshold": 0.75
+        },
+        "H2": {
+          "fit": 181012,
+          "calibration": 30124,
+          "evaluation": 12636,
+          "hurdle_threshold": 0.8
+        },
+        "H3": {
+          "fit": 163070,
+          "calibration": 26811,
+          "evaluation": 12697,
+          "hurdle_threshold": 0.75
+        }
+      }
+    },
+    {
+      "origin": "2025-08-01",
+      "calibration_start_target_month": "2025-06-01",
+      "fit_rows": 601914,
+      "calibration_rows": 98950,
+      "evaluation_rows": 39699,
+      "horizon_rows": {
+        "H1": {
+          "fit": 220398,
+          "calibration": 35739,
+          "evaluation": 13187,
+          "hurdle_threshold": 0.65
+        },
+        "H2": {
+          "fit": 200306,
+          "calibration": 33101,
+          "evaluation": 13250,
+          "hurdle_threshold": 0.55
+        },
+        "H3": {
+          "fit": 181210,
+          "calibration": 30110,
+          "evaluation": 13262,
+          "hurdle_threshold": 0.6
+        }
+      }
+    },
+    {
+      "origin": "2025-09-01",
+      "calibration_start_target_month": "2025-07-01",
+      "fit_rows": 663528,
+      "calibration_rows": 106560,
+      "evaluation_rows": 40959,
+      "horizon_rows": {
+        "H1": {
+          "fit": 242249,
+          "calibration": 37735,
+          "evaluation": 13631,
+          "hurdle_threshold": 0.75
+        },
+        "H2": {
+          "fit": 220792,
+          "calibration": 35720,
+          "evaluation": 13655,
+          "hurdle_threshold": 0.6
+        },
+        "H3": {
+          "fit": 200487,
+          "calibration": 33105,
+          "evaluation": 13673,
+          "hurdle_threshold": 0.55
+        }
+      }
+    },
+    {
+      "origin": "2025-10-01",
+      "calibration_start_target_month": "2025-08-01",
+      "fit_rows": 728652,
+      "calibration_rows": 113009,
+      "evaluation_rows": 42632,
+      "horizon_rows": {
+        "H1": {
+          "fit": 264983,
+          "calibration": 39459,
+          "evaluation": 14222,
+          "hurdle_threshold": 0.8
+        },
+        "H2": {
+          "fit": 242659,
+          "calibration": 37781,
+          "evaluation": 14242,
+          "hurdle_threshold": 0.7
+        },
+        "H3": {
+          "fit": 221010,
+          "calibration": 35769,
+          "evaluation": 14168,
+          "hurdle_threshold": 0.7
+        }
+      }
+    },
+    {
+      "origin": "2025-11-01",
+      "calibration_start_target_month": "2025-09-01",
+      "fit_rows": 796793,
+      "calibration_rows": 118438,
+      "evaluation_rows": 43300,
+      "horizon_rows": {
+        "H1": {
+          "fit": 288552,
+          "calibration": 41040,
+          "evaluation": 14573,
+          "hurdle_threshold": 0.8
+        },
+        "H2": {
+          "fit": 265378,
+          "calibration": 39541,
+          "evaluation": 14509,
+          "hurdle_threshold": 0.75
+        },
+        "H3": {
+          "fit": 242863,
+          "calibration": 37857,
+          "evaluation": 14218,
+          "hurdle_threshold": 0.7
+        }
+      }
+    },
+    {
+      "origin": "2025-12-01",
+      "calibration_start_target_month": "2025-10-01",
+      "fit_rows": 867380,
+      "calibration_rows": 123205,
+      "evaluation_rows": 44289,
+      "horizon_rows": {
+        "H1": {
+          "fit": 312795,
+          "calibration": 42426,
+          "evaluation": 14775,
+          "hurdle_threshold": 0.65
+        },
+        "H2": {
+          "fit": 288971,
+          "calibration": 41147,
+          "evaluation": 14484,
+          "hurdle_threshold": 0.65
+        },
+        "H3": {
+          "fit": 265614,
+          "calibration": 39632,
+          "evaluation": 15030,
+          "hurdle_threshold": 0.7
+        }
+      }
+    }
+  ],
+  "safety": {
+    "supabase_accessed": false,
+    "frozen_test_touched": false,
+    "reconciliation_run": false,
+    "model_freeze_run": false,
+    "production_published": false,
+    "current_status_used_as_predictor": false,
+    "evaluation_labels_used_for_fit_or_calibration": false
+  },
+  "input_sha256": {
+    "pair_panel": "85c61a2669ceb17f3f03edb1fb9a6dcc1bfc715d5a1bd31204f5d8e367117ae8",
+    "canonical_pair_feature": "805d00b098b1d052516d95a469c4a83093d9425f89ea614683a71c726e780ace",
+    "selected_feature_list": "781b2eace75ca2bdb865a521b5541e415f571a5d61955c244d36d4636ea9f867",
+    "model_contract": "019440ff50d1280691c1405de54951510f4debede92cc71b6e36bdb451a8bcca",
+    "rolling_contract": "04b7328dd6a8ad352a5f17f9692335060611e764a04993426646573ec78817bf"
+  }
+}

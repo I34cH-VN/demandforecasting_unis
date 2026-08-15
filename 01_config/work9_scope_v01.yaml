@@ -1,0 +1,17 @@
+version: work9_scope_v01
+status: CLEAN_RERUN
+workspace: /content/drive/MyDrive/work9
+primary_grain: base_sku_x_branch_x_month
+target: gross_positive_m2
+dataset_version: dataset_v012
+feature_version: pair_feature_v013
+feature_selection_version: feature_selection_v04
+model_candidate_version: pair_modeling_v02
+rolling_backtest_version: rolling_backtest_v01
+zero_semantics:
+  known_pair_closed_month_no_sales_row: OBSERVED_ZERO_IMPLICIT
+  target_value_m2: 0
+  target_available: true
+monthly_retrain: expanding_window_direct_h1_h2_h3
+unseen_pair_forecast: false
+current_status_role: publication_mask_only

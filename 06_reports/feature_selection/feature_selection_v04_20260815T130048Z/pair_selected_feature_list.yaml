@@ -1,0 +1,64 @@
+version: feature_selection_v04
+track: PAIR
+source_feature_run_id: feature_stage_v013_20260815T123431Z
+selection_run_id: feature_selection_v04_20260815T130048Z
+status: CANDIDATE_PENDING_AUDIT
+selected_features:
+  - sku_global_roll_3_mean
+  - sku_global_lag_3
+  - sku_global_lag_1
+  - size_branch_target_available_sku_count_lag_1
+  - pair_lag_1
+  - pair_roll_3_mean
+  - pair_roll_6_mean
+  - sku_global_positive_rate_12m
+  - sku_known_branch_count_to_origin
+  - pair_roll_3_sum
+  - pair_roll_12_sum
+  - pair_roll_6_sum
+  - sku_global_roll_6_mean
+  - pair_positive_rate_to_origin
+  - target_working_days_proxy
+  - pair_cv2_positive_to_origin
+  - tile_size_code
+  - size_branch_lag_2
+  - size_branch_roll_12_mean
+  - sku_global_roll_12_mean
+  - pair_roll_3_std
+  - pair_lag_2
+  - size_branch_positive_sku_count_lag_1
+  - horizon
+  - target_month_sin
+  - months_since_last_positive
+  - pair_roll_12_mean
+  - target_days_since_prev_tet_from_midmonth
+  - size_branch_lag_1
+  - pair_lag_12
+  - target_days_to_next_tet_from_midmonth
+  - sku_global_roll_6_sum
+  - target_public_holiday_event_count
+  - sku_global_lag_12
+  - target_lunar_month_mid
+  - pair_roll_3_positive_count
+  - sku_ever_positive_branch_count_to_origin
+  - pair_lag_6
+  - size_branch_lag_6
+  - pair_lag_3
+  - pair_last_positive_m2_to_origin
+  - size_branch_roll_3_mean
+  - size_branch_lag_12
+  - pair_roll_6_positive_count
+  - pair_roll_12_positive_count
+  - pair_peak_positive_m2_to_origin
+  - pair_adi_target_available_to_origin
+  - sku_global_lag_2
+  - sku_global_lag_6
+  - target_month_num
+  - months_since_first_positive
+  - pair_roll_6_std
+  - pair_roll_12_std
+  - pair_roll_12_target_available_count
+stage7_notes:
+  pooled_model_requires_horizon: true
+  direct_per_horizon_model_may_drop_horizon_as_constant: true
+  frozen_test_used: false

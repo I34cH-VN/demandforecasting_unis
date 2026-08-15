@@ -1,0 +1,95 @@
+version: dataset_contract_v012
+status: READY_TO_RUN_WORK9
+workspace:
+  root: /content/drive/MyDrive/work9
+  execution: google_colab
+source:
+  mode: SELECT_ONLY
+  tables:
+    master_sku: raw.master_sku
+    master_channel: raw.master_channel
+    sales_monthly: raw.sales_monthly
+target:
+  unit: M2
+  semantics: gross_positive_m2
+  positive_quantity: add_to_gross
+  zero_quantity: explicit_zero_evidence
+  negative_quantity: audit_and_negative_component_not_gross
+  missing_pair_month: OBSERVED_ZERO_IMPLICIT
+  closed_month_rule: known_pair_no_sales_row_is_zero
+  unknown_allowed_only_for: source_month_not_closed_or_source_load_failure
+forecast_grains:
+  bravo_branch_month:
+    role: observation_lineage_only
+    forecast_v1: false
+  base_sku_branch_month:
+    role: pair_forecast_target
+    forecast_v1: true
+    unseen_pair_forecast: false
+  branch_month:
+    role: diagnostic_only
+    forecast_v1: false
+mapping:
+  bravo_to_base:
+    source_key: raw.master_sku.bravo_sku
+    target_field: raw.master_sku.base_sku
+    infer_by_suffix: false
+    infer_by_prefix: false
+    use_factory_sku_for_mapping: false
+    use_sale_sku_for_mapping: false
+    use_replacement_sku_for_mapping: false
+business_fields:
+  branch_channel:
+    keep: true
+    role: current_snapshot_channel_metadata
+    direct_historical_model_use: blocked_pending_timing_semantics
+  factory_code:
+    keep: true
+    role: base_metadata_candidate
+  factory_sku:
+    keep: true
+    role: lineage_research
+    demand_routing: false
+    substitute_group: false
+  sale_sku:
+    keep: true
+    role: lineage_reporting
+    direct_model_feature_default: false
+  replacement_sku:
+    keep: true
+    role: AUDIT_ONLY
+    auto_transfer_demand: false
+modeling_universe:
+  exact_base_group_count: 4
+  group1_numeric: true
+  group2: L1
+  group3_numeric: true
+  invalid_structure_modeling: false
+  non_l1_modeling: false
+status_semantics:
+  current_status_rewrites_history: false
+  current_status_role: publication_only
+calendar:
+  safe_core:
+  - month
+  - month_num
+  - quarter
+  - year
+  - days_in_month
+  blocked_pending_contract:
+  - working_days
+  - holiday_count
+  - is_tet_month
+  - days_to_tet
+  - days_from_tet
+  - is_pre_tet
+  - is_post_tet_recovery
+authorization:
+  core_dataset_build: true
+  feature_build: true
+  pair_modeling: true
+  branch_modeling: false
+  reconciliation: false
+  freeze: false
+  frozen_test: false
+  production: false

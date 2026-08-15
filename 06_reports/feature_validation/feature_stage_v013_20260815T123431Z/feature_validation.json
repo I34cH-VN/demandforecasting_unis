@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "checks": {
+    "pair_grain_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_grain_unique": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_information_origin_safe": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_information_origin_safe": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_target_horizon_alignment": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_target_horizon_alignment": {
+      "pass": true,
+      "detail": null
+    },
+    "frozen_test_not_touched_pair": {
+      "pass": true,
+      "detail": null
+    },
+    "frozen_test_not_touched_branch": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_train_cutoff_respected": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_train_cutoff_respected": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_validation_origin_locked": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_validation_origin_locked": {
+      "pass": true,
+      "detail": null
+    },
+    "negative_only_target_not_trainable": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_candidate_list_no_direct_target_or_snapshot": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_candidate_list_no_direct_target_or_snapshot": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_peak_carried_forward_after_positive": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_peak_share_carried_forward_after_positive": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_calendar_v013_features_present": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_calendar_v013_no_missing": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_lunar_month_range_valid": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_working_days_proxy_valid": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_tet_distance_nonnegative": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_calendar_constant_within_target_month": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_validation_tet_sequence_and_position_correct": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_train_contains_tet_examples": {
+      "pass": true,
+      "detail": null
+    },
+    "pair_train_contains_non_tet_public_holidays": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_calendar_v013_features_present": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_calendar_v013_no_missing": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_lunar_month_range_valid": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_working_days_proxy_valid": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_tet_distance_nonnegative": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_calendar_constant_within_target_month": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_validation_tet_sequence_and_position_correct": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_train_contains_tet_examples": {
+      "pass": true,
+      "detail": null
+    },
+    "branch_train_contains_non_tet_public_holidays": {
+      "pass": true,
+      "detail": null
+    }
+  },
+  "pair_rows": 1186159,
+  "branch_rows": 3468,
+  "pair_train_rows_eligible": 1090317,
+  "pair_validation_rows_eligible": 77886,
+  "branch_train_rows_eligible": 3288,
+  "branch_validation_rows_eligible": 180,
+  "frozen_test_touched": false
+}

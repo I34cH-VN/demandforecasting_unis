@@ -1,0 +1,13 @@
+{
+  "freeze_id": "model_architecture_freeze_v01_20260815T152950Z",
+  "status": "APPROVED",
+  "freeze_scope": "ARCHITECTURE_ONLY",
+  "champion_model": "soft_two_part_expected",
+  "reference_fallback_model": "lightgbm_tweedie",
+  "source_challenger_run_id": "soft_two_part_challenger_v01_20260815T145347Z",
+  "source_rolling_run_id": "rolling_backtest_v01_20260815T132319Z",
+  "contract_path": "/content/drive/MyDrive/work9/01_config/model_architecture_freeze_v01.yaml",
+  "decision_doc_path": "/content/drive/MyDrive/work9/00_docs/MODEL_ARCHITECTURE_FREEZE_V1.0.md",
+  "frozen_test_open": false,
+  "created_at_utc": "2026-08-15T15:29:50Z"
+}

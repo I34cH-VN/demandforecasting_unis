@@ -1,0 +1,311 @@
+{
+  "run_id": "pair_modeling_v02_20260815T130724Z",
+  "run_type": "PAIR_MODEL_CANDIDATE_V02",
+  "status": "PASS",
+  "model_version": "pair_modeling_v02",
+  "dataset_version": "dataset_v012",
+  "feature_version": "pair_feature_v013",
+  "row_counts": {
+    "train": 1090317,
+    "validation_primary": 44289,
+    "validation_secondary": 77886
+  },
+  "selected_feature_count": 54,
+  "selected_features": [
+    "sku_global_roll_3_mean",
+    "sku_global_lag_3",
+    "sku_global_lag_1",
+    "size_branch_target_available_sku_count_lag_1",
+    "pair_lag_1",
+    "pair_roll_3_mean",
+    "pair_roll_6_mean",
+    "sku_global_positive_rate_12m",
+    "sku_known_branch_count_to_origin",
+    "pair_roll_3_sum",
+    "pair_roll_12_sum",
+    "pair_roll_6_sum",
+    "sku_global_roll_6_mean",
+    "pair_positive_rate_to_origin",
+    "target_working_days_proxy",
+    "pair_cv2_positive_to_origin",
+    "tile_size_code",
+    "size_branch_lag_2",
+    "size_branch_roll_12_mean",
+    "sku_global_roll_12_mean",
+    "pair_roll_3_std",
+    "pair_lag_2",
+    "size_branch_positive_sku_count_lag_1",
+    "horizon",
+    "target_month_sin",
+    "months_since_last_positive",
+    "pair_roll_12_mean",
+    "target_days_since_prev_tet_from_midmonth",
+    "size_branch_lag_1",
+    "pair_lag_12",
+    "target_days_to_next_tet_from_midmonth",
+    "sku_global_roll_6_sum",
+    "target_public_holiday_event_count",
+    "sku_global_lag_12",
+    "target_lunar_month_mid",
+    "pair_roll_3_positive_count",
+    "sku_ever_positive_branch_count_to_origin",
+    "pair_lag_6",
+    "size_branch_lag_6",
+    "pair_lag_3",
+    "pair_last_positive_m2_to_origin",
+    "size_branch_roll_3_mean",
+    "size_branch_lag_12",
+    "pair_roll_6_positive_count",
+    "pair_roll_12_positive_count",
+    "pair_peak_positive_m2_to_origin",
+    "pair_adi_target_available_to_origin",
+    "sku_global_lag_2",
+    "sku_global_lag_6",
+    "target_month_num",
+    "months_since_first_positive",
+    "pair_roll_6_std",
+    "pair_roll_12_std",
+    "pair_roll_12_target_available_count"
+  ],
+  "devices": [
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 1,
+      "candidate": "lightgbm_tweedie"
+    },
+    {
+      "library": "catboost",
+      "requested": "GPU",
+      "actual": "GPU",
+      "fallback_reason": null,
+      "horizon": 1,
+      "candidate": "catboost_tweedie"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 1,
+      "candidate": "hurdle_occurrence"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 1,
+      "candidate": "hurdle_positive"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 2,
+      "candidate": "lightgbm_tweedie"
+    },
+    {
+      "library": "catboost",
+      "requested": "GPU",
+      "actual": "GPU",
+      "fallback_reason": null,
+      "horizon": 2,
+      "candidate": "catboost_tweedie"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 2,
+      "candidate": "hurdle_occurrence"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 2,
+      "candidate": "hurdle_positive"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 3,
+      "candidate": "lightgbm_tweedie"
+    },
+    {
+      "library": "catboost",
+      "requested": "GPU",
+      "actual": "GPU",
+      "fallback_reason": null,
+      "horizon": 3,
+      "candidate": "catboost_tweedie"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 3,
+      "candidate": "hurdle_occurrence"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cuda",
+      "actual": "gpu",
+      "fallback_reason": "cuda:LightGBMError:CUDA Tree Learner was not enabled in this build.\nPlease recompile with CMake option -DUSE_CUDA=1 (NVIDIA GPUs) or -DUSE_ROCM=1 (AMD GPUs)",
+      "horizon": 3,
+      "candidate": "hurdle_positive"
+    }
+  ],
+  "catboost_target_scaling": [
+    {
+      "horizon": 1,
+      "target_scale": 13108.32
+    },
+    {
+      "horizon": 2,
+      "target_scale": 9823.5
+    },
+    {
+      "horizon": 3,
+      "target_scale": 9823.5
+    }
+  ],
+  "hurdle_thresholds": [
+    {
+      "horizon": 1,
+      "threshold": 0.5,
+      "validation_wape": 0.7937395298647189,
+      "zero_false_positive_rate": 0.07272125358640477
+    },
+    {
+      "horizon": 2,
+      "threshold": 0.9,
+      "validation_wape": 0.9467950666974493,
+      "zero_false_positive_rate": 0.0004198857910648304
+    },
+    {
+      "horizon": 3,
+      "threshold": 0.6,
+      "validation_wape": 0.9026477752103531,
+      "zero_false_positive_rate": 0.026737967914438502
+    }
+  ],
+  "behavior_rule": {
+    "regular": "positive_count>very_sparse_max AND ADI<adi_threshold AND CV2<cv2_threshold",
+    "intermittent": "sufficient_history AND finite ADI/CV2 AND NOT regular",
+    "very_sparse": "insufficient positive history OR undefined ADI/CV2",
+    "small_segment_gate_fallback": "best allowed expert on whole Primary horizon"
+  },
+  "primary_behavior_gated": {
+    "model": "behavior_gated",
+    "universe": "PRIMARY",
+    "horizon": null,
+    "segment": null,
+    "n_rows": 44289,
+    "wape": 0.8593796511853881,
+    "mae": 25.086772924307947,
+    "bias": -825318.3270370018,
+    "bias_ratio": -0.6383603173509279,
+    "zero_false_positive_rate": 0.030004110152075627,
+    "positive_wape": 0.8143224891452846
+  },
+  "branch_diagnostic": {
+    "branch_aggregate_wape": 0.639437682500369
+  },
+  "cumulative_3m": {
+    "coverage": {
+      "pair_origin_total": 15076,
+      "pair_origin_complete_h1_h2_h3": 14166,
+      "pair_origin_incomplete": 910,
+      "complete_rate": 0.9396391615813213
+    },
+    "behavior_gated_metrics": [
+      {
+        "model": "behavior_gated",
+        "level": "PAIR",
+        "n_units": 14166,
+        "wape_3m": 0.7529722454261791,
+        "mae_3m": 63.36270640813922,
+        "bias_3m": -765655.3065507973,
+        "bias_ratio_3m": -0.6422902194568767,
+        "actual_sum_m2": 1192070.6300000001,
+        "forecast_sum_m2": 426415.3234492027
+      },
+      {
+        "model": "behavior_gated",
+        "level": "BASE_SKU",
+        "n_units": 1227,
+        "wape_3m": 0.6562591826860786,
+        "mae_3m": 637.577259452224,
+        "bias_3m": -765655.3065507973,
+        "bias_ratio_3m": -0.6422902194568768,
+        "actual_sum_m2": 1192070.63,
+        "forecast_sum_m2": 426415.3234492027
+      },
+      {
+        "model": "behavior_gated",
+        "level": "BRANCH",
+        "n_units": 57,
+        "wape_3m": 0.6422902194568767,
+        "mae_3m": 13432.549237733287,
+        "bias_3m": -765655.3065507973,
+        "bias_ratio_3m": -0.6422902194568767,
+        "actual_sum_m2": 1192070.6300000001,
+        "forecast_sum_m2": 426415.32344920276
+      },
+      {
+        "model": "behavior_gated",
+        "level": "PORTFOLIO",
+        "n_units": 1,
+        "wape_3m": 0.6422902194568767,
+        "mae_3m": 765655.3065507972,
+        "bias_3m": -765655.3065507972,
+        "bias_ratio_3m": -0.6422902194568767,
+        "actual_sum_m2": 1192070.63,
+        "forecast_sum_m2": 426415.3234492027
+      }
+    ],
+    "overlapping_windows_note": "Rolling 3M windows overlap across consecutive forecast origins and are not independent samples."
+  },
+  "forecast_revision": {
+    "transitions": [
+      "H2_TO_H1",
+      "H3_TO_H2"
+    ],
+    "evaluable": false,
+    "not_evaluable_reason": "NO_CONSECUTIVE_ORIGIN_TARGET_OVERLAP_IN_PRIMARY_VALIDATION",
+    "rows": []
+  },
+  "safety": {
+    "supabase_accessed": false,
+    "frozen_test_touched": false,
+    "reconciliation_run": false,
+    "production_published": false,
+    "current_status_used_as_predictor": false
+  },
+  "input_sha256": {
+    "pair_feature_panel": "805d00b098b1d052516d95a469c4a83093d9425f89ea614683a71c726e780ace",
+    "pair_panel": "85c61a2669ceb17f3f03edb1fb9a6dcc1bfc715d5a1bd31204f5d8e367117ae8",
+    "selected_feature_list": "781b2eace75ca2bdb865a521b5541e415f571a5d61955c244d36d4636ea9f867",
+    "model_contract": "019440ff50d1280691c1405de54951510f4debede92cc71b6e36bdb451a8bcca"
+  },
+  "output_sha256": {
+    "model_scoreboard_primary": "cab2962861cdcaef399c7109d47ebadf7458c10917ad92301901331959fadef6",
+    "behavior_gate": "a32b2c301b1f96c6e61bb12574b8a7bc9153bd4a03d539f2f943bbd3f1603031",
+    "primary_validation_predictions": "926db350d9d5d2782fd69ce6a2e49d777d41a2c01d9ec33afad25301a92c3ff5",
+    "hurdle_threshold_calibration": "6b4e156341066562c6173f21e80a00726aa5a9cf8494a65ecb998591a541e49d",
+    "cumulative_3m_pair_predictions": "dd636587cd1f9f3a0067767324489584a6059055e6b18b77808d9242910d0de3",
+    "cumulative_3m_scoreboard": "00b9155199e584950c29b879ecb51d149b71a1c5b9cb2ee4d9553a60acd84f98",
+    "forecast_revision_scoreboard": "a755106c261f74dcfec0e9d097aa72999b2ed27b3fb380f573fbe5d703246c60",
+    "forecast_revision_detail": "866d736bbcb8f9354cf27cfb5770e9e774f257675910f6970be9a717a362eaa3"
+  }
+}

@@ -1,0 +1,2072 @@
+{
+  "run_id": "soft_two_part_challenger_v01_20260815T145347Z",
+  "run_type": "SOFT_TWO_PART_CHALLENGER_V01",
+  "status": "PASS",
+  "challenger_version": "soft_two_part_challenger_v01",
+  "source_rolling_run_id": "rolling_backtest_v01_20260815T132319Z",
+  "source_diagnosis_run_id": "underforecast_diagnosis_v01_20260815T140720Z",
+  "reference_model": "lightgbm_tweedie",
+  "challenger_model": "soft_two_part_expected",
+  "formula": "P(Y>0|X) * E(Y|Y>0,X)",
+  "n_origins": 12,
+  "evaluation_rows": 420846,
+  "selected_feature_count": 54,
+  "feature_parity": {
+    "parity_origin": "2025-12-01",
+    "rolling_rows": 78864,
+    "canonical_rows": 78864,
+    "pass": true,
+    "mismatch_columns": []
+  },
+  "cumulative_3m_coverage": {
+    "pair_origin_total": 142815,
+    "pair_origin_complete_h1_h2_h3": 135448,
+    "pair_origin_incomplete": 7367,
+    "complete_rate": 0.9484157826558834
+  },
+  "decision": {
+    "status": "REVIEW_REQUIRED",
+    "auto_promote": false,
+    "auto_freeze": false,
+    "metrics": {
+      "monthly_wape": {
+        "lightgbm_reference": 1.0097204563712923,
+        "soft_two_part_expected": 1.003091245508153
+      },
+      "monthly_bias_ratio": {
+        "lightgbm_reference": -0.19194919605405938,
+        "soft_two_part_expected": -0.1768771592211498
+      },
+      "cumulative_3m_pair": {
+        "lightgbm_reference": {
+          "wape_3m": 0.7777062747967908,
+          "bias_ratio_3m": -0.18851185624540298
+        },
+        "soft_two_part_expected": {
+          "wape_3m": 0.7688392220320148,
+          "bias_ratio_3m": -0.17209010649437992
+        }
+      },
+      "cumulative_3m_base_sku": {
+        "lightgbm_reference": {
+          "wape_3m": 0.44757549114750866,
+          "bias_ratio_3m": -0.18851185624540295
+        },
+        "soft_two_part_expected": {
+          "wape_3m": 0.4404366558769656,
+          "bias_ratio_3m": -0.17209010649437995
+        }
+      },
+      "cumulative_3m_branch": {
+        "lightgbm_reference": {
+          "wape_3m": 0.309997821623723,
+          "bias_ratio_3m": -0.18851185624540295
+        },
+        "soft_two_part_expected": {
+          "wape_3m": 0.29133815626654214,
+          "bias_ratio_3m": -0.17209010649437995
+        }
+      },
+      "cumulative_3m_portfolio": {
+        "lightgbm_reference": {
+          "wape_3m": 0.1933249381192616,
+          "bias_ratio_3m": -0.18851185624540295
+        },
+        "soft_two_part_expected": {
+          "wape_3m": 0.1850135358573273,
+          "bias_ratio_3m": -0.17209010649437995
+        }
+      },
+      "zero_forecast_sum_m2": {
+        "lightgbm_reference": 4874809.372251396,
+        "soft_two_part_expected": 4879758.96039451
+      },
+      "positive_wape": {
+        "lightgbm_reference": 0.7291063103266173,
+        "soft_two_part_expected": 0.7221921807427673
+      },
+      "positive_bias_ratio": {
+        "lightgbm_reference": -0.47256334209873363,
+        "soft_two_part_expected": -0.4577762239865352
+      },
+      "pair_revision_ratio": {
+        "H2_TO_H1": {
+          "lightgbm_reference": 0.4127580530329183,
+          "soft_two_part_expected": 0.427257286115049
+        },
+        "H3_TO_H2": {
+          "lightgbm_reference": 0.3613526970040952,
+          "soft_two_part_expected": 0.35886330469572547
+        }
+      }
+    }
+  },
+  "devices": [
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 138
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 167
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 138
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 113
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 105
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-01-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 96
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 116
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 144
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 64
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 124
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 66
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-02-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 94
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 100
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 167
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 54
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 119
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 51
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-03-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 86
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 197
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 174
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 72
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 165
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 56
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-04-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 91
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 151
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 193
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 99
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 170
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 101
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-05-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 176
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 278
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 145
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 144
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 127
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 107
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-06-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 150
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 352
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 130
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 155
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 106
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 100
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-07-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 127
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 264
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 116
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 422
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 102
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 381
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-08-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 91
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 334
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 188
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 237
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 155
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 438
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-09-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 109
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 368
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 222
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 197
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 231
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 179
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-10-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 146
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 238
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 202
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 187
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 203
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 160
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-11-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 149
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 390
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 206
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 464
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 202
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 347
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "selection_fit"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "forecast_origin": "2025-12-01",
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 162
+    }
+  ],
+  "origin_audits": [
+    {
+      "origin": "2025-01-01",
+      "calibration_start_target_month": "2024-11-01",
+      "fit_rows": 243649,
+      "calibration_rows": 53475,
+      "evaluation_rows": 22201,
+      "horizon_rows": {
+        "H1": {
+          "fit": 95870,
+          "calibration": 19421,
+          "evaluation": 7410,
+          "positive_fit": 40951,
+          "positive_calibration": 10083,
+          "occurrence_n_estimators": 138,
+          "positive_quantity_n_estimators": 167
+        },
+        "H2": {
+          "fit": 81051,
+          "calibration": 17796,
+          "evaluation": 7397,
+          "positive_fit": 34192,
+          "positive_calibration": 9122,
+          "occurrence_n_estimators": 138,
+          "positive_quantity_n_estimators": 113
+        },
+        "H3": {
+          "fit": 66728,
+          "calibration": 16258,
+          "evaluation": 7394,
+          "positive_fit": 27277,
+          "positive_calibration": 8286,
+          "occurrence_n_estimators": 105,
+          "positive_quantity_n_estimators": 96
+        }
+      }
+    },
+    {
+      "origin": "2025-02-01",
+      "calibration_start_target_month": "2024-12-01",
+      "fit_rows": 288597,
+      "calibration_rows": 58357,
+      "evaluation_rows": 23690,
+      "horizon_rows": {
+        "H1": {
+          "fit": 111586,
+          "calibration": 20823,
+          "evaluation": 7911,
+          "positive_fit": 46681,
+          "positive_calibration": 9239,
+          "occurrence_n_estimators": 116,
+          "positive_quantity_n_estimators": 144
+        },
+        "H2": {
+          "fit": 96014,
+          "calibration": 19582,
+          "evaluation": 7904,
+          "positive_fit": 39500,
+          "positive_calibration": 8584,
+          "occurrence_n_estimators": 64,
+          "positive_quantity_n_estimators": 124
+        },
+        "H3": {
+          "fit": 80997,
+          "calibration": 17952,
+          "evaluation": 7875,
+          "positive_fit": 32262,
+          "positive_calibration": 7860,
+          "occurrence_n_estimators": 66,
+          "positive_quantity_n_estimators": 94
+        }
+      }
+    },
+    {
+      "origin": "2025-03-01",
+      "calibration_start_target_month": "2025-01-01",
+      "fit_rows": 335649,
+      "calibration_rows": 62921,
+      "evaluation_rows": 26773,
+      "horizon_rows": {
+        "H1": {
+          "fit": 128040,
+          "calibration": 22156,
+          "evaluation": 8952,
+          "positive_fit": 52782,
+          "positive_calibration": 9054,
+          "occurrence_n_estimators": 100,
+          "positive_quantity_n_estimators": 167
+        },
+        "H2": {
+          "fit": 111692,
+          "calibration": 21004,
+          "evaluation": 8918,
+          "positive_fit": 45158,
+          "positive_calibration": 8468,
+          "occurrence_n_estimators": 54,
+          "positive_quantity_n_estimators": 119
+        },
+        "H3": {
+          "fit": 95917,
+          "calibration": 19761,
+          "evaluation": 8903,
+          "positive_fit": 37526,
+          "positive_calibration": 8016,
+          "occurrence_n_estimators": 51,
+          "positive_quantity_n_estimators": 86
+        }
+      }
+    },
+    {
+      "origin": "2025-04-01",
+      "calibration_start_target_month": "2025-02-01",
+      "fit_rows": 383851,
+      "calibration_rows": 68170,
+      "evaluation_rows": 30075,
+      "horizon_rows": {
+        "H1": {
+          "fit": 144753,
+          "calibration": 24273,
+          "evaluation": 10025,
+          "positive_fit": 57214,
+          "positive_calibration": 10678,
+          "occurrence_n_estimators": 197,
+          "positive_quantity_n_estimators": 174
+        },
+        "H2": {
+          "fit": 127806,
+          "calibration": 22540,
+          "evaluation": 10017,
+          "positive_fit": 49346,
+          "positive_calibration": 9550,
+          "occurrence_n_estimators": 72,
+          "positive_quantity_n_estimators": 165
+        },
+        "H3": {
+          "fit": 111292,
+          "calibration": 21357,
+          "evaluation": 10033,
+          "positive_fit": 41454,
+          "positive_calibration": 9002,
+          "occurrence_n_estimators": 56,
+          "positive_quantity_n_estimators": 91
+        }
+      }
+    },
+    {
+      "origin": "2025-05-01",
+      "calibration_start_target_month": "2025-03-01",
+      "fit_rows": 435696,
+      "calibration_rows": 73603,
+      "evaluation_rows": 33554,
+      "horizon_rows": {
+        "H1": {
+          "fit": 162391,
+          "calibration": 26888,
+          "evaluation": 11191,
+          "positive_fit": 60867,
+          "positive_calibration": 12659,
+          "occurrence_n_estimators": 151,
+          "positive_quantity_n_estimators": 193
+        },
+        "H2": {
+          "fit": 145231,
+          "calibration": 24219,
+          "evaluation": 11189,
+          "positive_fit": 52948,
+          "positive_calibration": 10901,
+          "occurrence_n_estimators": 99,
+          "positive_quantity_n_estimators": 170
+        },
+        "H3": {
+          "fit": 128074,
+          "calibration": 22496,
+          "evaluation": 11174,
+          "positive_fit": 44887,
+          "positive_calibration": 9835,
+          "occurrence_n_estimators": 101,
+          "positive_quantity_n_estimators": 176
+        }
+      }
+    },
+    {
+      "origin": "2025-06-01",
+      "calibration_start_target_month": "2025-04-01",
+      "fit_rows": 488894,
+      "calibration_rows": 81179,
+      "evaluation_rows": 35700,
+      "horizon_rows": {
+        "H1": {
+          "fit": 180579,
+          "calibration": 30168,
+          "evaluation": 11907,
+          "positive_fit": 65992,
+          "positive_calibration": 14062,
+          "occurrence_n_estimators": 278,
+          "positive_quantity_n_estimators": 145
+        },
+        "H2": {
+          "fit": 162842,
+          "calibration": 26839,
+          "evaluation": 11895,
+          "positive_fit": 57727,
+          "positive_calibration": 11852,
+          "occurrence_n_estimators": 144,
+          "positive_quantity_n_estimators": 127
+        },
+        "H3": {
+          "fit": 145473,
+          "calibration": 24172,
+          "evaluation": 11898,
+          "positive_fit": 49601,
+          "positive_calibration": 10198,
+          "occurrence_n_estimators": 107,
+          "positive_quantity_n_estimators": 150
+        }
+      }
+    },
+    {
+      "origin": "2025-07-01",
+      "calibration_start_target_month": "2025-05-01",
+      "fit_rows": 543986,
+      "calibration_rows": 90058,
+      "evaluation_rows": 37974,
+      "horizon_rows": {
+        "H1": {
+          "fit": 199904,
+          "calibration": 33123,
+          "evaluation": 12641,
+          "positive_fit": 72038,
+          "positive_calibration": 14661,
+          "occurrence_n_estimators": 352,
+          "positive_quantity_n_estimators": 130
+        },
+        "H2": {
+          "fit": 181012,
+          "calibration": 30124,
+          "evaluation": 12636,
+          "positive_fit": 62991,
+          "positive_calibration": 12812,
+          "occurrence_n_estimators": 155,
+          "positive_quantity_n_estimators": 106
+        },
+        "H3": {
+          "fit": 163070,
+          "calibration": 26811,
+          "evaluation": 12697,
+          "positive_fit": 54521,
+          "positive_calibration": 10784,
+          "occurrence_n_estimators": 100,
+          "positive_quantity_n_estimators": 127
+        }
+      }
+    },
+    {
+      "origin": "2025-08-01",
+      "calibration_start_target_month": "2025-06-01",
+      "fit_rows": 601914,
+      "calibration_rows": 98950,
+      "evaluation_rows": 39699,
+      "horizon_rows": {
+        "H1": {
+          "fit": 220398,
+          "calibration": 35739,
+          "evaluation": 13187,
+          "positive_fit": 77627,
+          "positive_calibration": 15248,
+          "occurrence_n_estimators": 264,
+          "positive_quantity_n_estimators": 116
+        },
+        "H2": {
+          "fit": 200306,
+          "calibration": 33101,
+          "evaluation": 13250,
+          "positive_fit": 67893,
+          "positive_calibration": 13626,
+          "occurrence_n_estimators": 422,
+          "positive_quantity_n_estimators": 102
+        },
+        "H3": {
+          "fit": 181210,
+          "calibration": 30110,
+          "evaluation": 13262,
+          "positive_fit": 58738,
+          "positive_calibration": 11904,
+          "occurrence_n_estimators": 381,
+          "positive_quantity_n_estimators": 91
+        }
+      }
+    },
+    {
+      "origin": "2025-09-01",
+      "calibration_start_target_month": "2025-07-01",
+      "fit_rows": 663528,
+      "calibration_rows": 106560,
+      "evaluation_rows": 40959,
+      "horizon_rows": {
+        "H1": {
+          "fit": 242249,
+          "calibration": 37735,
+          "evaluation": 13631,
+          "positive_fit": 83646,
+          "positive_calibration": 14840,
+          "occurrence_n_estimators": 334,
+          "positive_quantity_n_estimators": 188
+        },
+        "H2": {
+          "fit": 220792,
+          "calibration": 35720,
+          "evaluation": 13655,
+          "positive_fit": 73086,
+          "positive_calibration": 13722,
+          "occurrence_n_estimators": 237,
+          "positive_quantity_n_estimators": 155
+        },
+        "H3": {
+          "fit": 200487,
+          "calibration": 33105,
+          "evaluation": 13673,
+          "positive_fit": 63271,
+          "positive_calibration": 12300,
+          "occurrence_n_estimators": 438,
+          "positive_quantity_n_estimators": 109
+        }
+      }
+    },
+    {
+      "origin": "2025-10-01",
+      "calibration_start_target_month": "2025-08-01",
+      "fit_rows": 728652,
+      "calibration_rows": 113009,
+      "evaluation_rows": 42632,
+      "horizon_rows": {
+        "H1": {
+          "fit": 264983,
+          "calibration": 39459,
+          "evaluation": 14222,
+          "positive_fit": 89695,
+          "positive_calibration": 14423,
+          "occurrence_n_estimators": 368,
+          "positive_quantity_n_estimators": 222
+        },
+        "H2": {
+          "fit": 242659,
+          "calibration": 37781,
+          "evaluation": 14242,
+          "positive_fit": 78723,
+          "positive_calibration": 13489,
+          "occurrence_n_estimators": 197,
+          "positive_quantity_n_estimators": 231
+        },
+        "H3": {
+          "fit": 221010,
+          "calibration": 35769,
+          "evaluation": 14168,
+          "positive_fit": 68170,
+          "positive_calibration": 12507,
+          "occurrence_n_estimators": 179,
+          "positive_quantity_n_estimators": 146
+        }
+      }
+    },
+    {
+      "origin": "2025-11-01",
+      "calibration_start_target_month": "2025-09-01",
+      "fit_rows": 796793,
+      "calibration_rows": 118438,
+      "evaluation_rows": 43300,
+      "horizon_rows": {
+        "H1": {
+          "fit": 288552,
+          "calibration": 41040,
+          "evaluation": 14573,
+          "positive_fit": 95355,
+          "positive_calibration": 14330,
+          "occurrence_n_estimators": 238,
+          "positive_quantity_n_estimators": 202
+        },
+        "H2": {
+          "fit": 265378,
+          "calibration": 39541,
+          "evaluation": 14509,
+          "positive_fit": 83913,
+          "positive_calibration": 13477,
+          "occurrence_n_estimators": 187,
+          "positive_quantity_n_estimators": 203
+        },
+        "H3": {
+          "fit": 242863,
+          "calibration": 37857,
+          "evaluation": 14218,
+          "positive_fit": 72980,
+          "positive_calibration": 12663,
+          "occurrence_n_estimators": 160,
+          "positive_quantity_n_estimators": 149
+        }
+      }
+    },
+    {
+      "origin": "2025-12-01",
+      "calibration_start_target_month": "2025-10-01",
+      "fit_rows": 867380,
+      "calibration_rows": 123205,
+      "evaluation_rows": 44289,
+      "horizon_rows": {
+        "H1": {
+          "fit": 312795,
+          "calibration": 42426,
+          "evaluation": 14775,
+          "positive_fit": 100292,
+          "positive_calibration": 15426,
+          "occurrence_n_estimators": 390,
+          "positive_quantity_n_estimators": 206
+        },
+        "H2": {
+          "fit": 288971,
+          "calibration": 41147,
+          "evaluation": 14484,
+          "positive_fit": 88565,
+          "positive_calibration": 14639,
+          "occurrence_n_estimators": 464,
+          "positive_quantity_n_estimators": 202
+        },
+        "H3": {
+          "fit": 265614,
+          "calibration": 39632,
+          "evaluation": 15030,
+          "positive_fit": 77275,
+          "positive_calibration": 13794,
+          "occurrence_n_estimators": 347,
+          "positive_quantity_n_estimators": 162
+        }
+      }
+    }
+  ],
+  "safety": {
+    "supabase_accessed": false,
+    "frozen_test_touched": false,
+    "reconciliation_run": false,
+    "model_freeze_run": false,
+    "production_published": false,
+    "current_status_used_as_predictor": false,
+    "evaluation_labels_used_for_fit_or_iteration_selection": false,
+    "hard_zero_threshold_used": false,
+    "posthoc_global_bias_scaling_used": false
+  },
+  "input_sha256": {
+    "pair_panel": "85c61a2669ceb17f3f03edb1fb9a6dcc1bfc715d5a1bd31204f5d8e367117ae8",
+    "canonical_pair_feature": "805d00b098b1d052516d95a469c4a83093d9425f89ea614683a71c726e780ace",
+    "selected_feature_list": "781b2eace75ca2bdb865a521b5541e415f571a5d61955c244d36d4636ea9f867",
+    "model_contract": "019440ff50d1280691c1405de54951510f4debede92cc71b6e36bdb451a8bcca",
+    "rolling_contract": "04b7328dd6a8ad352a5f17f9692335060611e764a04993426646573ec78817bf",
+    "challenger_contract": "3d600642fd7e5cc7ab72d8be33a7a9d60fbc26a819398654c12e3ab740b7c0cb",
+    "reference_predictions": "e8f24c4143aa5d0ed25a188cadbd6ecb981b63e6eac552957cb982bd5e39c0a3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "run_id": "feature_selection_v04_20260815T130048Z",
+  "status": "PASS",
+  "selection_version": "feature_selection_v04",
+  "source_feature_run_id": "feature_stage_v013_20260815T123431Z",
+  "pair_selected_path": "/content/drive/MyDrive/work9/05_selected_features/pair_selected_feature_list_v04.yaml",
+  "branch_selected_path": "/content/drive/MyDrive/work9/05_selected_features/branch_selected_feature_list_v04.yaml",
+  "manifest_path": "/content/drive/MyDrive/work9/05_selected_features/feature_selection_manifest_v04.json",
+  "validation_primary": "CURRENT_ACTIVE_PORTFOLIO",
+  "validation_secondary": "ALL_DIAGNOSTIC_ONLY",
+  "created_at_utc": "2026-08-15T13:00:50.426291+00:00"
+}

@@ -1,0 +1,92 @@
+version: soft_two_part_challenger_contract_v01
+status: CHALLENGER_RESEARCH_ONLY
+primary_grain: base_sku_x_branch_x_month
+target: target_actual_gross_m2
+horizons: [1, 2, 3]
+lineage:
+  required_dataset_version: dataset_v012
+  required_pair_feature_version: pair_feature_v013
+  required_feature_selection_version: feature_selection_v04
+  required_model_contract_version: model_contract_v02
+  required_rolling_backtest_version: rolling_backtest_v01
+  required_rolling_status: PASS
+  required_diagnosis_version: underforecast_diagnosis_v01
+  required_diagnosis_status: PASS
+reference:
+  model: lightgbm_tweedie
+  prediction_column: pred_lightgbm_tweedie
+  source: current_rolling_backtest_run
+  require_exact_evaluation_key_match: true
+  require_actual_match: true
+  evaluation_keys:
+    - base_sku
+    - branch_code
+    - forecast_origin
+    - target_month
+    - horizon
+challenger:
+  name: soft_two_part_expected
+  formula: p_positive_x_positive_quantity
+  hard_zero_threshold_allowed: false
+  posthoc_global_bias_scaling_allowed: false
+  pair_level_rounding_allowed: false
+  occurrence_model: lightgbm_binary
+  positive_quantity_model: lightgbm_tweedie
+  selected_feature_source: 05_selected_features/pair_selected_feature_list_v04.yaml
+  separate_direct_models_by_horizon: true
+  probability_clip: [0.0, 1.0]
+  quantity_floor: 0.0
+training:
+  split_policy: reuse_rolling_backtest_v01_origin_honest_split
+  calibration_target_months: 3
+  occurrence_fit_labels: all_target_available_rows_in_fit
+  occurrence_label: target_actual_gross_m2_gt_0
+  positive_quantity_fit_labels: target_actual_gross_m2_gt_0_only
+  early_stopping_source: trailing_calibration_only
+  refit_after_iteration_selection: fit_plus_calibration
+  evaluation_labels_visible_to_training: false
+  min_positive_fit_rows_per_horizon: 500
+  min_positive_calibration_rows_per_horizon: 50
+metrics:
+  monthly:
+    - wape
+    - mae
+    - bias
+    - bias_ratio
+    - zero_false_positive_rate
+    - positive_wape
+  zero_positive_diagnostic:
+    - actual_zero_rows
+    - zero_forecast_sum_m2
+    - actual_positive_rows
+    - positive_actual_sum_m2
+    - positive_forecast_sum_m2
+    - positive_wape
+    - positive_bias_ratio
+    - probability_brier
+  cumulative_3m:
+    require_complete_h1_h2_h3: true
+    levels: [PAIR, BASE_SKU, BRANCH, PORTFOLIO]
+  revision:
+    transitions: [H2_TO_H1, H3_TO_H2]
+    levels: [PAIR, BASE_SKU]
+decision:
+  auto_promote: false
+  auto_freeze: false
+  review_required: true
+  compare_against_reference_on_same_rows_only: true
+  priority_order:
+    - base_sku_3m_wape
+    - branch_3m_wape
+    - pair_3m_wape
+    - portfolio_abs_bias
+    - zero_forecast_volume
+    - positive_demand_wape
+    - forecast_revision_stability
+safety:
+  supabase_access_allowed: false
+  frozen_test_allowed: false
+  reconciliation_allowed: false
+  model_freeze_allowed: false
+  production_publish_allowed: false
+  current_status_as_predictor_allowed: false

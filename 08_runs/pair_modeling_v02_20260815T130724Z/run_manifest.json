@@ -1,0 +1,17 @@
+{
+  "run_id": "pair_modeling_v02_20260815T130724Z",
+  "run_type": "PAIR_MODEL_CANDIDATE_V02",
+  "status": "PASS",
+  "source_feature_run_id": "feature_stage_v013_20260815T123431Z",
+  "source_feature_selection_run_id": "feature_selection_v04_20260815T130048Z",
+  "report_dir": "/content/drive/MyDrive/work9/06_reports/model_selection/pair_modeling_v02_20260815T130724Z",
+  "model_manifest_path": "/content/drive/MyDrive/work9/06_reports/model_selection/pair_modeling_v02_20260815T130724Z/model_manifest.json",
+  "model_manifest_sha256": "e37c59e06b11658183cce2e806d71d40f860da10557db9fd72ab3c2d470babca",
+  "created_at_utc": "2026-08-15T13:14:44.832268+00:00",
+  "safety": {
+    "supabase_accessed": false,
+    "frozen_test_touched": false,
+    "reconciliation_run": false,
+    "production_published": false
+  }
+}

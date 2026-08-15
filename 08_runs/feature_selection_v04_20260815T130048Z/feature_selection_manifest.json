@@ -1,0 +1,77 @@
+{
+  "run_id": "feature_selection_v04_20260815T130048Z",
+  "run_type": "FEATURE_SELECTION_V04",
+  "status": "PASS",
+  "created_at_utc": "2026-08-15T13:00:50.360233+00:00",
+  "source_feature_run_id": "feature_stage_v013_20260815T123431Z",
+  "dataset_version": "dataset_v012",
+  "pair_feature_version": "pair_feature_v013",
+  "branch_feature_version": "branch_feature_v013",
+  "selection_version": "feature_selection_v04",
+  "validation_policy": {
+    "primary": "CURRENT_ACTIVE_PORTFOLIO",
+    "secondary": "ALL_DIAGNOSTIC_ONLY"
+  },
+  "input_sha256": {
+    "pair_feature_panel": "805d00b098b1d052516d95a469c4a83093d9425f89ea614683a71c726e780ace",
+    "branch_feature_panel": "d5b53442ce332cb2facbe5a5301ca72b1c1c601a8d5baf638007b88db4fd7dbc",
+    "feature_inventory": "85726730462eb799adc75576edc39cbc0c992db9655b1fe12aaa0cd4fe78859f"
+  },
+  "code_sha256": "b25cb485903861ec4869df1233c957a17ba2b4c9e4325397d269eb2850deba8f",
+  "contract_sha256": "5b6245bd7cf0226ade04082d1be80f45d7ae6b2853d8976a73b2d29a9bf84693",
+  "source_feature_manifest_sha256": "882c0eb26c48612f6169fe9d1e752d3d372397dff6648e547dbe93deb6aa2aad",
+  "row_counts": {
+    "pair_train_eligible": 1090317,
+    "pair_validation_primary_current_active": 44289,
+    "pair_validation_secondary_all": 77886,
+    "branch_train_eligible": 3288,
+    "branch_validation_primary_current_active": 171,
+    "branch_validation_secondary_all": 180
+  },
+  "selected_counts": {
+    "pair": 54,
+    "branch": 35
+  },
+  "screening_metrics_primary": {
+    "pair": {
+      "wape": 1.1250538847254414,
+      "h1_wape": 0.8816784940287405,
+      "h2_wape": 2.236320795453793,
+      "h3_wape": 1.0832535833425037
+    },
+    "branch": {
+      "wape": 0.46975383913253344,
+      "h1_wape": 0.32761489481813755,
+      "h2_wape": 1.3878479921940456,
+      "h3_wape": 0.388973031649852
+    }
+  },
+  "screening_metrics_secondary_all": {
+    "pair": {
+      "wape": 1.1626210347705441,
+      "h1_wape": 0.9110589187945889,
+      "h2_wape": 2.2953011956502016,
+      "h3_wape": 1.1260197261672054
+    },
+    "branch": {
+      "wape": 0.46975383913253344,
+      "h1_wape": 0.3276148948181377,
+      "h2_wape": 1.387847992194046,
+      "h3_wape": 0.38897303164985186
+    }
+  },
+  "outputs": {
+    "report_dir": "/content/drive/MyDrive/work9/06_reports/feature_selection/feature_selection_v04_20260815T130048Z",
+    "pair_selected_feature_list": "/content/drive/MyDrive/work9/06_reports/feature_selection/feature_selection_v04_20260815T130048Z/pair_selected_feature_list.yaml",
+    "branch_selected_feature_list": "/content/drive/MyDrive/work9/06_reports/feature_selection/feature_selection_v04_20260815T130048Z/branch_selected_feature_list.yaml"
+  },
+  "safety": {
+    "supabase_accessed": false,
+    "frozen_test_touched": false,
+    "screening_estimator_persisted": false,
+    "model_candidate_created": false,
+    "pair_modeling_run": false,
+    "branch_modeling_run": false,
+    "production_published": false
+  }
+}

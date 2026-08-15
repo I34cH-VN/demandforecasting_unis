@@ -1,0 +1,11 @@
+{
+  "run_id": "rolling_backtest_v01_20260815T132319Z",
+  "status": "PASS",
+  "backtest_version": "rolling_backtest_v01",
+  "source_model_candidate_run_id": "pair_modeling_v02_20260815T130724Z",
+  "report_dir": "/content/drive/MyDrive/work9/06_reports/rolling_backtest/rolling_backtest_v01_20260815T132319Z",
+  "run_manifest_path": "/content/drive/MyDrive/work9/08_runs/rolling_backtest_v01_20260815T132319Z/run_manifest.json",
+  "backtest_manifest_path": "/content/drive/MyDrive/work9/06_reports/rolling_backtest/rolling_backtest_v01_20260815T132319Z/backtest_manifest.json",
+  "backtest_manifest_sha256": "253a5a54d475d852364ef9ab1c5b55eac38d1ad4810141f6ebc9187d9afdf8f4",
+  "created_at_utc": "2026-08-15T13:51:43.338150+00:00"
+}

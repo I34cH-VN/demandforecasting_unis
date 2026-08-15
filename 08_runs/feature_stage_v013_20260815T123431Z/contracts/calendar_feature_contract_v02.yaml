@@ -1,0 +1,72 @@
+version: calendar_feature_contract_v02
+status: APPROVED_FOR_FEATURE_V013_BUILD
+calendar_scope: Vietnam
+timezone: UTC+07:00
+timing_class: KNOWN_FUTURE_DETERMINISTIC_CALENDAR
+origin_safe: true
+depends_on_target_actuals: false
+depends_on_current_master_snapshot: false
+lunar_calendar:
+  conversion: self_contained_astronomical_solar_to_lunar_vn
+  midmonth_definition: Gregorian target month day 15 converted to Vietnam lunar calendar
+  features:
+  - target_lunar_month_mid
+  - target_lunar_month_mid_is_leap
+  - target_lunar_month_sin
+  - target_lunar_month_cos
+  verification_anchors:
+    '2024-02-10': lunar 01/01/2024
+    '2025-01-29': lunar 01/01/2025
+    '2026-02-17': lunar 01/01/2026
+    '2024-04-18': lunar 10/03/2024
+    '2025-04-07': lunar 10/03/2025
+    '2026-04-26': lunar 10/03/2026
+tet_features:
+  target_is_tet_month: target month contains mung 1 Tet
+  target_is_pre_tet_month: one Gregorian month before Tet month
+  target_is_post_tet_month: one Gregorian month after Tet month
+  target_tet_day_of_month: Gregorian day number of mung 1 Tet within Tet month; 0
+    otherwise
+  target_days_to_next_tet_from_midmonth: nonnegative calendar days from target-month
+    day 15 to next Tet
+  target_days_since_prev_tet_from_midmonth: nonnegative calendar days since previous
+    Tet to target-month day 15
+gregorian_seasonality:
+- target_month_num
+- target_quarter
+- target_year
+- target_days_in_month
+- target_month_sin
+- target_month_cos
+- target_weekday_count
+public_holiday_features:
+  statutory_basis:
+    new_year: 1
+    lunar_new_year: 5
+    hung_kings_10_3_lunar: 1
+    reunification_30_4: 1
+    labour_1_5: 1
+    national_day: 2
+  features:
+    target_public_holiday_event_count: count of named statutory holiday events whose
+      anchor falls in target month
+    target_statutory_holiday_nominal_days: nominal paid holiday days assigned to target
+      month
+    target_working_days_proxy: max(target_weekday_count - target_statutory_holiday_nominal_days,
+      0)
+  important_semantic: working_days_proxy is a rule-based monthly capacity proxy, not
+    a company operating calendar
+explicit_non_use:
+  company_shutdown_calendar: false
+  year_specific_public_sector_swap_days_as_model_features: false
+  year_specific_makeup_saturdays_as_model_features: false
+  reason: avoid historical announcement-timing leakage and avoid assuming the business
+    follows public-sector swap schedules
+candidate_policy: all V013 calendar fields enter Stage-6 candidate universe; none
+  are forced selected
+source_notes:
+- Vietnam Government Portal official notices confirm Tet dates 2024, 2025, 2026.
+- Vietnam Government Portal 2026 holiday guidance summarizes Labor Code Article 112
+  nominal paid-holiday counts.
+- Government Portal confirms Hung Kings 2024-04-18 and 2026-04-26; deterministic lunar
+  conversion reproduces 2025-04-07 for lunar 10/3.

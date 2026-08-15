@@ -1,0 +1,190 @@
+version: model_contract_v02
+status: CANDIDATE_MODELING_ONLY
+primary_grain: base_sku_x_branch_x_month
+target: target_actual_gross_m2
+horizons:
+- 1
+- 2
+- 3
+seed: 42
+lineage:
+  required_dataset_version: dataset_v012
+  required_pair_feature_version: pair_feature_v013
+  required_feature_selection_version: feature_selection_v04
+  required_feature_selection_status: PASS
+universe:
+  train:
+    require_historical_train_mask: true
+    require_target_available: true
+    filter_current_active: false
+  validation_primary:
+    require_official_validation_mask: true
+    require_target_available: true
+    require_current_production_forecast_mask: true
+    require_known_pair_asof_origin: true
+  validation_secondary:
+    require_official_validation_mask: true
+    require_target_available: true
+    diagnostic_only: true
+feature_safety:
+  selected_feature_source: 05_selected_features/pair_selected_feature_list_v04.yaml
+  drop_direct_horizon_constant: true
+  forbidden_exact:
+  - target_actual_gross_m2
+  - target_actual_observed
+  - target_actual_positive
+  - target_actual_negative_only
+  - target_available
+  - historical_train_mask
+  - official_validation_mask
+  - current_production_forecast_mask
+  - known_pair_asof_origin
+  forbidden_contains:
+  - base_current_active
+  - branch_current_active
+  - current_status
+  - status_snapshot
+gpu:
+  prefer_gpu: true
+  lightgbm_device_order:
+  - cuda
+  - gpu
+  - cpu
+  catboost_device_order:
+  - GPU
+  - CPU
+  gpu_device_id: 0
+  record_actual_device: true
+lightgbm_tweedie:
+  objective: tweedie
+  tweedie_variance_power: 1.5
+  n_estimators: 1400
+  learning_rate: 0.035
+  num_leaves: 63
+  max_depth: -1
+  min_child_samples: 50
+  subsample: 0.9
+  colsample_bytree: 0.9
+  reg_lambda: 1.0
+  max_bin_gpu: 63
+  early_stopping_rounds: 120
+catboost_tweedie:
+  loss_function: Tweedie:variance_power=1.5
+  iterations: 1400
+  learning_rate: 0.035
+  depth: 8
+  l2_leaf_reg: 5.0
+  early_stopping_rounds: 120
+  verbose: 100
+hurdle:
+  classifier: lightgbm_binary
+  positive_regressor: lightgbm_tweedie
+  min_positive_train_rows: 500
+  threshold_calibration:
+    enabled: true
+    grid:
+    - 0.0
+    - 0.05
+    - 0.1
+    - 0.15
+    - 0.2
+    - 0.25
+    - 0.3
+    - 0.35
+    - 0.4
+    - 0.45
+    - 0.5
+    - 0.55
+    - 0.6
+    - 0.65
+    - 0.7
+    - 0.75
+    - 0.8
+    - 0.85
+    - 0.9
+    - 0.95
+    objective: wape
+    tie_break: zero_false_positive_rate
+    wape_tie_tolerance: 1.0e-09
+intermittent_baselines:
+  alpha: 0.1
+  beta: 0.1
+  history_source: dataset_v012_pair_panel
+  require_target_available_history: true
+  require_month_le_forecast_origin: true
+behavior:
+  adi_threshold: 1.32
+  cv2_threshold: 0.49
+  very_sparse_max_positive_count: 1
+  min_segment_validation_rows: 50
+  regular_experts:
+  - lightgbm_tweedie
+  - catboost_tweedie
+  - hurdle
+  - naive_1
+  - seasonal_naive_12
+  - moving_average_3
+  intermittent_experts:
+  - hurdle
+  - lightgbm_tweedie
+  - catboost_tweedie
+  - croston_sba
+  - tsb
+  - naive_1
+  very_sparse_experts:
+  - hurdle
+  - croston_sba
+  - tsb
+  - naive_1
+  - lightgbm_tweedie
+  rule: regular iff ADI<1.32 AND CV2<0.49 with sufficient positive history; otherwise
+    intermittent unless very_sparse
+  small_segment_fallback: best_allowed_expert_on_primary_horizon
+metrics:
+  primary_rank_metric: wape
+  report:
+  - wape
+  - mae
+  - bias
+  - bias_ratio
+  - zero_false_positive_rate
+  - positive_wape
+  branch_aggregate_diagnostic: true
+  cumulative_3m:
+    enabled: true
+    require_complete_h1_h2_h3: true
+    levels:
+    - PAIR
+    - BASE_SKU
+    - BRANCH
+    - PORTFOLIO
+    report:
+    - wape_3m
+    - mae_3m
+    - bias_3m
+    - bias_ratio_3m
+    report_coverage: true
+  forecast_revision:
+    enabled: true
+    transitions:
+    - H2_TO_H1
+    - H3_TO_H2
+    levels:
+    - PAIR
+    - BASE_SKU
+    report:
+    - revision_mae_m2
+    - revision_ratio_vs_old_forecast
+    - signed_revision_m2
+safety:
+  supabase_select_only: true
+  supabase_write_allowed: false
+  frozen_test_allowed: false
+  reconciliation_allowed: false
+  freeze_allowed: false
+  production_publish_allowed: false
+catboost_target_scaling:
+  enabled: true
+  method: max_train_to_one
+  min_scale: 1.0
+  reason: Tweedie numerical stability; predictions are rescaled to M2 after inference

@@ -1,0 +1,77 @@
+version: work9_stage_gate_v01
+status: PROSPECTIVE_FROZEN_FORECAST_V01_LOCKED_PENDING_ACTUALS
+workspace: /content/drive/MyDrive/work9
+business_rule_revision: known_pair_closed_month_no_sales_row_is_zero
+accepted_lineage:
+  dataset_run_id: core_dataset_v012_20260815T122509Z
+  dataset_status: PASS
+  feature_run_id: feature_stage_v013_20260815T123431Z
+  feature_status: PASS
+  feature_selection_run_id: feature_selection_v04_20260815T130048Z
+  feature_selection_status: PASS
+  model_candidate_run_id: pair_modeling_v02_20260815T130724Z
+  model_candidate_status: PASS
+  rolling_backtest_run_id: rolling_backtest_v01_20260815T132319Z
+  rolling_backtest_status: PASS
+  diagnosis_run_id: underforecast_diagnosis_v01_20260815T140720Z
+  diagnosis_status: PASS
+  soft_two_part_challenger_run_id: soft_two_part_challenger_v01_20260815T145347Z
+  soft_two_part_challenger_status: PASS
+  architecture_freeze_id: model_architecture_freeze_v01_20260815T152950Z
+  architecture_freeze_status: APPROVED
+  prospective_frozen_forecast_run_id: prospective_frozen_forecast_v01_20260815T155226Z
+  prospective_frozen_forecast_status: PASS
+  prospective_prediction_sha256: 3dd59e503f3bf59eaa542222a20995aca9af61732eaecb4702e61cb1161f33dc
+architecture:
+  champion: soft_two_part_expected
+  reference_fallback: lightgbm_tweedie
+  freeze_scope: ARCHITECTURE_ONLY
+  selected_pair_feature_count: 54
+prospective_holdout:
+  forecast_origin: '2026-06-01'
+  target_months: ['2026-07-01', '2026-08-01', '2026-09-01']
+  evaluation_status: LOCKED_PENDING_ACTUALS
+  frozen_unique_pairs: 17253
+  frozen_rows: 51759
+  source_post_lock_max_month: '2026-06-01'
+  source_post_lock_jul_rows: 0
+  source_post_lock_aug_rows: 0
+  source_post_lock_sep_rows: 0
+next_stage: WAIT_FOR_JUL_AUG_SEP_2026_CLOSED_ACTUALS_THEN_06B_FROZEN_TEST_SCORING
+authorization:
+  dataset_build: true
+  feature_build: true
+  feature_selection: true
+  pair_modeling: true
+  rolling_backtest: true
+  underforecast_diagnosis: true
+  soft_two_part_challenger: true
+  model_architecture_freeze: true
+  prospective_frozen_forecast_lock: true
+  replace_or_overwrite_frozen_forecast: false
+  frozen_test_scoring: false
+  reconciliation: false
+  production: false
+safety:
+  supabase_select_only: true
+  supabase_write_allowed: false
+  current_status_as_model_feature: false
+  current_status_rewrites_train_history: false
+  work8_runtime_dependency_allowed: false
+  imported_model_artifacts_allowed: false
+  frozen_forecast_locked: true
+  future_actual_labels_read_by_06a: false
+  future_actual_labels_used_by_06a: false
+  holdout_scored: false
+  architecture_changed_after_freeze: false
+  prediction_and_six_model_hashes_verified: true
+pointers:
+  dataset: 01_config/current_dataset_run.json
+  feature: 01_config/current_feature_run.json
+  feature_selection: 01_config/current_feature_selection_run.json
+  model_candidate: 01_config/current_model_candidate_run.json
+  rolling_backtest: 01_config/current_rolling_backtest_run.json
+  diagnosis: 01_config/current_underforecast_diagnosis_run.json
+  challenger: 01_config/current_soft_two_part_challenger_run.json
+  architecture_freeze: 01_config/current_model_architecture_freeze.json
+  prospective_frozen_forecast: 01_config/current_prospective_frozen_forecast_run.json

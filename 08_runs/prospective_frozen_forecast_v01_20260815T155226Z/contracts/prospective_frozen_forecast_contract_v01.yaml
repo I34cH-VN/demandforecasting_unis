@@ -1,0 +1,79 @@
+version: prospective_frozen_forecast_contract_v01
+status: READY_FOR_PROSPECTIVE_LOCK
+workspace: /content/drive/MyDrive/work9
+purpose: lock_an_immutable_unseen_forecast_vintage_before_future_actuals_exist
+
+architecture:
+  freeze_version: model_architecture_freeze_v01
+  champion_model: soft_two_part_expected
+  formula: "P(Y>0|X) * E(Y|Y>0,X)"
+  reference_model: lightgbm_tweedie
+
+forecast_origin: '2026-06-01'
+horizons: [1, 2, 3]
+target_months:
+  H1: '2026-07-01'
+  H2: '2026-08-01'
+  H3: '2026-09-01'
+
+prelock_source_evidence:
+  checked_at_local: '2026-08-15T22:33:00+07:00'
+  source: raw.sales_monthly
+  max_month_observed: '2026-06-01'
+  rows_2026_06: 7664
+  rows_2026_07: 0
+  rows_2026_08: 0
+  note: metadata_only_check_before_forecast_lock_no_future_quantity_values_read
+
+source_snapshot:
+  dataset_version: dataset_v012
+  require_pair_panel_max_month_equals_forecast_origin: true
+  supabase_access_in_notebook: false
+  work8_runtime_dependency_allowed: false
+
+features:
+  selection_version: feature_selection_v04
+  selected_pair_feature_count: 54
+  current_status_as_predictor: false
+  origin_safe_only: true
+
+training:
+  method: expanding_history_with_trailing_calibration
+  calibration_target_months: 3
+  calibration_current_active_only: true
+  occurrence_model: lightgbm_binary
+  positive_quantity_model: lightgbm_tweedie_positive_targets_only
+  min_positive_fit_rows_per_horizon: 500
+  min_positive_calibration_rows_per_horizon: 50
+  iteration_selection_may_use_only_past_calibration_labels: true
+  final_refit_uses_fit_plus_calibration: true
+
+production_universe:
+  require_known_pair_asof_origin: true
+  require_base_current_active: true
+  require_branch_current_active: true
+  unseen_pair_forecast: false
+
+forecast_rules:
+  hard_probability_threshold: false
+  global_bias_scaling: false
+  pair_level_rounding: false
+  canonical_unit: M2_decimal
+
+frozen_test_reservation:
+  status_after_forecast_pass: LOCKED_PENDING_ACTUALS
+  evaluation_requires_all_target_months_closed_loaded: true
+  do_not_use_holdout_labels_to_change_v1_architecture: true
+  evaluate_exact_immutable_forecast_vintage: true
+  no_partial_reselection_from_h1_or_h2_results: true
+
+outputs:
+  run_root: 08_runs
+  report_root: 06_reports/prospective_frozen_forecast
+  pointer: 01_config/current_prospective_frozen_forecast_run.json
+
+safety:
+  no_future_actual_read: true
+  no_frozen_test_evaluation_now: true
+  no_reconciliation_now: true
+  no_production_publish_now: true

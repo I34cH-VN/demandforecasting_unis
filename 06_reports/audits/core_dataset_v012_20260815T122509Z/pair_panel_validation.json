@@ -1,0 +1,10 @@
+{
+  "rows": 585614,
+  "known_pairs": 28605,
+  "actual_observed_rows": 585614,
+  "missing_unknown_rows": 0,
+  "negative_only_rows": 8528,
+  "negative_only_target_available_rows": 0,
+  "negative_only_nonnull_actual_target_rows": 0,
+  "future_first_positive_visibility_rows": 0
+}

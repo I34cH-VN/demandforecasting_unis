@@ -1,0 +1,76 @@
+version: model_architecture_freeze_v01
+status: APPROVED
+freeze_scope: ARCHITECTURE_ONLY
+approved_at_utc: '2026-08-15T15:29:50Z'
+champion:
+  name: soft_two_part_expected
+  formula: P(Y>0|X) * E(Y|Y>0,X)
+  occurrence_model: lightgbm_binary
+  positive_quantity_model: lightgbm_tweedie
+  hard_probability_threshold: false
+  global_posthoc_bias_scaling: false
+  pair_level_rounding: false
+  direct_horizons: [1, 2, 3]
+reference_fallback:
+  name: lightgbm_tweedie
+lineage:
+  dataset_version: dataset_v012
+  dataset_run_id: core_dataset_v012_20260815T122509Z
+  pair_feature_version: pair_feature_v013
+  feature_run_id: feature_stage_v013_20260815T123431Z
+  feature_selection_version: feature_selection_v04
+  feature_selection_run_id: feature_selection_v04_20260815T130048Z
+  selected_pair_feature_count: 54
+  model_candidate_run_id: pair_modeling_v02_20260815T130724Z
+  rolling_backtest_run_id: rolling_backtest_v01_20260815T132319Z
+  diagnosis_run_id: underforecast_diagnosis_v01_20260815T140720Z
+  challenger_run_id: soft_two_part_challenger_v01_20260815T145347Z
+universe:
+  primary_grain: base_sku_x_branch_x_month
+  production_require_known_pair_asof_origin: true
+  production_require_base_current_active: true
+  production_require_branch_current_active: true
+  unseen_pair_forecast: false
+  current_status_as_predictor: false
+  train_filter_current_active: false
+  branch_month_role: diagnostic_aggregation_only
+target:
+  name: gross_positive_m2
+  known_pair_closed_month_no_sales_row: OBSERVED_ZERO_IMPLICIT
+  negative_only_target_available: false
+  preknown_zero_backfill: false
+  pair_history_start: first_valid_m2_observation
+  canonical_unit: M2_DECIMAL
+training_policy:
+  monthly_expanding_retrain: true
+  separate_direct_models_by_horizon: true
+  selected_feature_count: 54
+  early_stopping_uses_trailing_calibration_only: true
+  evaluation_labels_visible_to_training: false
+metrics_at_approval:
+  monthly_wape:
+    reference: 1.0097204563712923
+    champion: 1.003091245508153
+  monthly_bias_ratio:
+    reference: -0.19194919605405938
+    champion: -0.1768771592211498
+  cumulative_3m_wape:
+    pair: {reference: 0.7777062747967908, champion: 0.7688392220320148}
+    base_sku: {reference: 0.44757549114750866, champion: 0.4404366558769656}
+    branch: {reference: 0.309997821623723, champion: 0.29133815626654214}
+    portfolio: {reference: 0.1933249381192616, champion: 0.1850135358573273}
+  cumulative_3m_bias_ratio:
+    reference: -0.18851185624540295
+    champion: -0.17209010649437995
+known_limitations:
+  zero_forecast_volume_not_reduced: true
+  positive_demand_underforecast_remains: true
+  exact_zero_forecast_not_required: true
+safety:
+  frozen_test_open: false
+  frozen_test_touched_by_freeze: false
+  reconciliation_allowed: false
+  production_publish_allowed: false
+  supabase_write_allowed: false
+change_control:
+  architecture_change_requires_new_version_and_origin_honest_backtest: true

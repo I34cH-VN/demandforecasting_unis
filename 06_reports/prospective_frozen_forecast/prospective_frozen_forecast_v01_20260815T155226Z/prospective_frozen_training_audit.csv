@@ -1,0 +1,4 @@
+horizon,calibration_start_target_month,fit_rows,calibration_rows,fit_target_max,calibration_target_min,calibration_target_max,forecast_rows,positive_fit_rows,positive_calibration_rows,occurrence_n_estimators,positive_quantity_n_estimators,occurrence_device,positive_quantity_device
+1,2026-04-01,466913,48370,2026-03-01,2026-04-01,2026-06-01,17253,130647,15614,139,184,cpu,cpu
+2,2026-04-01,441168,46897,2026-03-01,2026-04-01,2026-06-01,17253,117909,14696,108,148,cpu,cpu
+3,2026-04-01,415246,45929,2026-03-01,2026-04-01,2026-06-01,17253,105435,14138,95,143,cpu,cpu

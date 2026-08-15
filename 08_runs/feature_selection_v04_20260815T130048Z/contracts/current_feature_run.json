@@ -1,0 +1,17 @@
+{
+  "run_id": "feature_stage_v013_20260815T123431Z",
+  "status": "PASS",
+  "dataset_run_id": "core_dataset_v012_20260815T122509Z",
+  "pair_feature_version": "pair_feature_v013",
+  "branch_feature_version": "branch_feature_v013",
+  "pair_feature_panel_path": "/content/drive/MyDrive/work9/04_data/features/feature_stage_v013_20260815T123431Z/pair_feature_panel_dev_v013.parquet",
+  "branch_feature_panel_path": "/content/drive/MyDrive/work9/04_data/features/feature_stage_v013_20260815T123431Z/branch_feature_panel_dev_v013.parquet",
+  "feature_inventory_path": "/content/drive/MyDrive/work9/06_reports/feature_validation/feature_stage_v013_20260815T123431Z/feature_inventory.csv",
+  "feature_manifest_path": "/content/drive/MyDrive/work9/08_runs/feature_stage_v013_20260815T123431Z/run_manifest.json",
+  "output_sha256": {
+    "pair_feature_panel": "805d00b098b1d052516d95a469c4a83093d9425f89ea614683a71c726e780ace",
+    "branch_feature_panel": "d5b53442ce332cb2facbe5a5301ca72b1c1c601a8d5baf638007b88db4fd7dbc",
+    "feature_inventory": "85726730462eb799adc75576edc39cbc0c992db9655b1fe12aaa0cd4fe78859f"
+  },
+  "created_at_utc": "2026-08-15T12:34:42.468071+00:00"
+}

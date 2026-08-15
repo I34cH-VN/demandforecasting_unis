@@ -1,0 +1,5 @@
+modeling_exclusion_reason,structure_valid,is_l1,bravo_rows,base_skus
+ELIGIBLE,True,True,14021,4609
+INVALID_STRUCTURE,False,False,175,169
+INVALID_STRUCTURE,False,True,80,54
+NON_L1,True,False,1223,1112

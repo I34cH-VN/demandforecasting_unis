@@ -1,0 +1,2 @@
+n_positive_actual_rows,actual_sum_m2,share_exact_integer_m2,share_on_0_1_m2_grid,share_on_0_01_m2_grid,share_on_0_001_m2_grid,min_positive_m2,p01_positive_m2,p05_positive_m2,median_positive_m2,p95_positive_m2
+156278,17371930.250000004,0.11461626076607072,0.33695721726666583,1.0,1.0,0.08,0.5,1.8,39.6,402.0

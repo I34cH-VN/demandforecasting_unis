@@ -1,0 +1,13 @@
+{
+  "status": "LOCKED_PENDING_ACTUALS",
+  "forecast_origin": "2026-06-01",
+  "target_months": [
+    "2026-07-01",
+    "2026-08-01",
+    "2026-09-01"
+  ],
+  "evaluation_rule": "Evaluate this immutable vintage only after all Jul-Aug-Sep 2026 actuals are closed/loaded; do not use these labels to alter V1 architecture.",
+  "champion_model": "soft_two_part_expected",
+  "prediction_path": "/content/drive/MyDrive/work9/08_runs/prospective_frozen_forecast_v01_20260815T155226Z/predictions/prospective_frozen_pair_forecast_v01.parquet",
+  "prediction_sha256": "3dd59e503f3bf59eaa542222a20995aca9af61732eaecb4702e61cb1161f33dc"
+}

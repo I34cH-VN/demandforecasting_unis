@@ -1,0 +1,47 @@
+{
+  "run_id": "feature_stage_v013_20260815T123431Z",
+  "run_type": "FEATURE_STAGE_V013",
+  "status": "PASS",
+  "created_at_utc": "2026-08-15T12:34:41.179282+00:00",
+  "locked_core_run_id": "core_dataset_v012_20260815T122509Z",
+  "dataset_version": "dataset_v012",
+  "pair_feature_version": "pair_feature_v013",
+  "branch_feature_version": "branch_feature_v013",
+  "code_sha256": "f3a599b931ddc195d5ff98c36de236ed98ba0b0e75c666a9195e1f97ae3e795c",
+  "evaluation_contract_sha256": "796879fcb467e085c7c031f9ff6e8c1278e7df601e3cd5139748a1b4216e2493",
+  "pair_feature_contract_sha256": "0c8ddae88f4c1fa000187843afb2818e4fad71b9fe44742b5ce8b818e7d984a8",
+  "branch_feature_contract_sha256": "0c401bfa1258f4abd0a5775712aca8e78cfc66951e41dc01d98201ea47307d19",
+  "calendar_feature_contract_sha256": "8e3dfb255a3b92f80f6a7dc877a0c12b36899421068200c58f73b363104d1a73",
+  "inputs": {
+    "pair_panel": "/content/drive/MyDrive/work9/08_runs/core_dataset_v012_20260815T122509Z/04_data/panels/base_sku_branch_month_panel_v012.parquet",
+    "branch_panel": "/content/drive/MyDrive/work9/08_runs/core_dataset_v012_20260815T122509Z/04_data/panels/branch_month_panel_v012.parquet"
+  },
+  "outputs": {
+    "pair_feature_panel": "/content/drive/MyDrive/work9/04_data/features/feature_stage_v013_20260815T123431Z/pair_feature_panel_dev_v013.parquet",
+    "branch_feature_panel": "/content/drive/MyDrive/work9/04_data/features/feature_stage_v013_20260815T123431Z/branch_feature_panel_dev_v013.parquet",
+    "feature_inventory": "/content/drive/MyDrive/work9/06_reports/feature_validation/feature_stage_v013_20260815T123431Z/feature_inventory.csv",
+    "feature_validation": "/content/drive/MyDrive/work9/06_reports/feature_validation/feature_stage_v013_20260815T123431Z/feature_validation.json",
+    "feature_profile": "/content/drive/MyDrive/work9/06_reports/feature_validation/feature_stage_v013_20260815T123431Z/feature_profile.json"
+  },
+  "output_sha256": {
+    "pair_feature_panel": "805d00b098b1d052516d95a469c4a83093d9425f89ea614683a71c726e780ace",
+    "branch_feature_panel": "d5b53442ce332cb2facbe5a5301ca72b1c1c601a8d5baf638007b88db4fd7dbc",
+    "feature_inventory": "85726730462eb799adc75576edc39cbc0c992db9655b1fe12aaa0cd4fe78859f"
+  },
+  "row_counts": {
+    "pair": 1186159,
+    "branch": 3468
+  },
+  "safety": {
+    "supabase_accessed": false,
+    "frozen_test_touched": false,
+    "feature_selection_run": false,
+    "model_training_run": false,
+    "production_published": false
+  },
+  "calendar_v013": {
+    "working_days_semantic": "RULE_BASED_PROXY_NOT_COMPANY_SHUTDOWN",
+    "public_sector_swap_schedule_used_as_model_feature": false,
+    "company_shutdown_calendar_used": false
+  }
+}

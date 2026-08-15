@@ -1,0 +1,44 @@
+version: evaluation_contract_v02
+status: WORK9_CURRENT_PORTFOLIO_SELECTION
+primary_grain: base_sku_x_branch_x_month
+horizons:
+- 1
+- 2
+- 3
+train:
+  target_start: '2024-01-01'
+  target_end: '2025-12-01'
+  universe: ALL_HISTORICAL_ELIGIBLE
+  filter_current_active: false
+  purpose: learn_historical_demand_behavior
+  random_split: false
+validation_primary:
+  forecast_origin: '2025-12-01'
+  targets:
+    1: '2026-01-01'
+    2: '2026-02-01'
+    3: '2026-03-01'
+  pair_universe:
+    require_target_available: true
+    require_known_pair_asof_origin: true
+    require_base_current_active: true
+    require_branch_current_active: true
+  branch_universe:
+    require_target_available: true
+    require_branch_current_active: true
+  purpose: FEATURE_AND_MODEL_SELECTION_FOR_CURRENT_PORTFOLIO
+  note: current status is a present-day portfolio mask, not historical as-of status
+validation_secondary:
+  universe: ALL_HISTORICAL_ELIGIBLE
+  purpose: DIAGNOSTIC_ONLY
+  may_select_features_or_models: false
+future_test_and_production:
+  pair_universe:
+    require_known_pair_asof_origin: true
+    require_base_current_active: true
+    require_branch_current_active: true
+  branch_universe:
+    require_branch_current_active: true
+  current_status_used_as_predictor: false
+origin_safety:
+  max_information_month_rule: information_month_le_forecast_origin

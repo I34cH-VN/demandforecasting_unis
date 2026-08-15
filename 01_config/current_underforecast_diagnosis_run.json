@@ -1,0 +1,8 @@
+{
+  "run_id": "underforecast_diagnosis_v01_20260815T140720Z",
+  "status": "PASS",
+  "diagnosis_version": "underforecast_diagnosis_v01",
+  "source_rolling_run_id": "rolling_backtest_v01_20260815T132319Z",
+  "report_dir": "/content/drive/MyDrive/work9/06_reports/underforecast_diagnosis/underforecast_diagnosis_v01_20260815T140720Z",
+  "diagnosis_manifest_path": "/content/drive/MyDrive/work9/06_reports/underforecast_diagnosis/underforecast_diagnosis_v01_20260815T140720Z/diagnosis_manifest.json"
+}

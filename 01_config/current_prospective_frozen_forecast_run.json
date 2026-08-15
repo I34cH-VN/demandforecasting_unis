@@ -1,0 +1,20 @@
+{
+  "run_id": "prospective_frozen_forecast_v01_20260815T155226Z",
+  "status": "PASS",
+  "frozen_forecast_version": "prospective_frozen_forecast_v01",
+  "architecture_freeze_id": "model_architecture_freeze_v01_20260815T152950Z",
+  "champion_model": "soft_two_part_expected",
+  "forecast_origin": "2026-06-01",
+  "target_months": [
+    "2026-07-01",
+    "2026-08-01",
+    "2026-09-01"
+  ],
+  "evaluation_status": "LOCKED_PENDING_ACTUALS",
+  "run_dir": "/content/drive/MyDrive/work9/08_runs/prospective_frozen_forecast_v01_20260815T155226Z",
+  "report_dir": "/content/drive/MyDrive/work9/06_reports/prospective_frozen_forecast/prospective_frozen_forecast_v01_20260815T155226Z",
+  "prediction_path": "/content/drive/MyDrive/work9/08_runs/prospective_frozen_forecast_v01_20260815T155226Z/predictions/prospective_frozen_pair_forecast_v01.parquet",
+  "prediction_sha256": "3dd59e503f3bf59eaa542222a20995aca9af61732eaecb4702e61cb1161f33dc",
+  "manifest_path": "/content/drive/MyDrive/work9/08_runs/prospective_frozen_forecast_v01_20260815T155226Z/prospective_frozen_forecast_manifest.json",
+  "reservation_path": "/content/drive/MyDrive/work9/06_reports/prospective_frozen_forecast/prospective_frozen_forecast_v01_20260815T155226Z/prospective_frozen_test_reservation.json"
+}

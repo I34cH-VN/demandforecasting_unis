@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "pair": {
+    "track": "PAIR",
+    "status": "PASS",
+    "checks": {
+      "nonempty_selected_list": true,
+      "selected_subset_static_kept": true,
+      "no_constant_selected": true,
+      "no_high_missing_selected": true,
+      "no_exact_duplicate_selected": true,
+      "horizon_present_for_pooled": true,
+      "validation_wape_finite": true,
+      "primary_validation_nonempty": true,
+      "secondary_validation_not_smaller": true,
+      "calendar_v013_candidates_seen": true,
+      "no_target_or_snapshot_selected": true
+    }
+  },
+  "branch": {
+    "track": "BRANCH",
+    "status": "PASS",
+    "checks": {
+      "nonempty_selected_list": true,
+      "selected_subset_static_kept": true,
+      "no_constant_selected": true,
+      "no_high_missing_selected": true,
+      "no_exact_duplicate_selected": true,
+      "horizon_present_for_pooled": true,
+      "validation_wape_finite": true,
+      "primary_validation_nonempty": true,
+      "secondary_validation_not_smaller": true,
+      "calendar_v013_candidates_seen": true,
+      "no_target_or_snapshot_selected": true
+    }
+  },
+  "frozen_test_touched": false,
+  "model_candidate_persisted": false
+}

@@ -1,0 +1,11 @@
+{
+  "run_id": "core_dataset_v012_20260815T122509Z",
+  "status": "PASS",
+  "dataset_version": "dataset_v012",
+  "run_dir": "/content/drive/MyDrive/work9/08_runs/core_dataset_v012_20260815T122509Z",
+  "audit_dir": "/content/drive/MyDrive/work9/06_reports/audits/core_dataset_v012_20260815T122509Z",
+  "manifest_path": "/content/drive/MyDrive/work9/06_reports/audits/core_dataset_v012_20260815T122509Z/run_manifest.json",
+  "pair_panel_path": "/content/drive/MyDrive/work9/08_runs/core_dataset_v012_20260815T122509Z/04_data/panels/base_sku_branch_month_panel_v012.parquet",
+  "branch_panel_path": "/content/drive/MyDrive/work9/08_runs/core_dataset_v012_20260815T122509Z/04_data/panels/branch_month_panel_v012.parquet",
+  "created_at_utc": "2026-08-15T12:25:50.294261+00:00"
+}

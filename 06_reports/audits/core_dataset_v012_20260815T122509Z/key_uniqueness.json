@@ -1,0 +1,10 @@
+{
+  "bridge_bravo_sku_duplicate_rows": 0,
+  "dim_base_sku_duplicate_rows": 0,
+  "dim_branch_duplicate_rows": 0,
+  "fact_duplicate_rows": 0,
+  "bravo_observation_duplicate_rows": 0,
+  "pair_panel_duplicate_rows": 0,
+  "branch_panel_duplicate_rows": 0,
+  "calendar_duplicate_rows": 0
+}

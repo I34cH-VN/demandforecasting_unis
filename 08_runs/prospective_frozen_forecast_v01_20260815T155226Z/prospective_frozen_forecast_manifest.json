@@ -1,0 +1,277 @@
+{
+  "run_id": "prospective_frozen_forecast_v01_20260815T155226Z",
+  "run_type": "PROSPECTIVE_FROZEN_FORECAST_V01",
+  "status": "PASS",
+  "frozen_forecast_version": "prospective_frozen_forecast_v01",
+  "architecture_freeze_run_id": "model_architecture_freeze_v01_20260815T152950Z",
+  "champion_model": "soft_two_part_expected",
+  "formula": "P(Y>0|X) * E(Y|Y>0,X)",
+  "dataset_run_id": "core_dataset_v012_20260815T122509Z",
+  "feature_selection_run_id": "feature_selection_v04_20260815T130048Z",
+  "forecast_origin": "2026-06-01",
+  "target_months": [
+    "2026-07-01",
+    "2026-08-01",
+    "2026-09-01"
+  ],
+  "selected_feature_count": 54,
+  "frame_audit": {
+    "forecast_origin": "2026-06-01",
+    "pair_panel_max_month": "2026-06-01",
+    "known_active_pairs_at_origin": 17253,
+    "forecast_rows": 51759,
+    "future_target_months": [
+      "2026-07-01",
+      "2026-08-01",
+      "2026-09-01"
+    ],
+    "training_supervised_rows_before_target_available_filter": 1587210
+  },
+  "training_audit": [
+    {
+      "horizon": 1,
+      "calibration_start_target_month": "2026-04-01",
+      "fit_rows": 466913,
+      "calibration_rows": 48370,
+      "fit_target_max": "2026-03-01",
+      "calibration_target_min": "2026-04-01",
+      "calibration_target_max": "2026-06-01",
+      "forecast_rows": 17253,
+      "positive_fit_rows": 130647,
+      "positive_calibration_rows": 15614,
+      "occurrence_n_estimators": 139,
+      "positive_quantity_n_estimators": 184,
+      "occurrence_device": "cpu",
+      "positive_quantity_device": "cpu"
+    },
+    {
+      "horizon": 2,
+      "calibration_start_target_month": "2026-04-01",
+      "fit_rows": 441168,
+      "calibration_rows": 46897,
+      "fit_target_max": "2026-03-01",
+      "calibration_target_min": "2026-04-01",
+      "calibration_target_max": "2026-06-01",
+      "forecast_rows": 17253,
+      "positive_fit_rows": 117909,
+      "positive_calibration_rows": 14696,
+      "occurrence_n_estimators": 108,
+      "positive_quantity_n_estimators": 148,
+      "occurrence_device": "cpu",
+      "positive_quantity_device": "cpu"
+    },
+    {
+      "horizon": 3,
+      "calibration_start_target_month": "2026-04-01",
+      "fit_rows": 415246,
+      "calibration_rows": 45929,
+      "fit_target_max": "2026-03-01",
+      "calibration_target_min": "2026-04-01",
+      "calibration_target_max": "2026-06-01",
+      "forecast_rows": 17253,
+      "positive_fit_rows": 105435,
+      "positive_calibration_rows": 14138,
+      "occurrence_n_estimators": 95,
+      "positive_quantity_n_estimators": 143,
+      "occurrence_device": "cpu",
+      "positive_quantity_device": "cpu"
+    }
+  ],
+  "forecast_rows": 51759,
+  "unique_pairs": 17253,
+  "forecast_summary": [
+    {
+      "horizon": 1,
+      "target_month": "2026-07-01",
+      "n_pairs": 17253,
+      "n_base_sku": 1447,
+      "n_branch": 58,
+      "forecast_sum_m2": 469830.32362036256,
+      "forecast_mean_m2": 27.2318045337253,
+      "mean_p_positive": 0.2993773401623863,
+      "mean_positive_quantity_m2": 65.86745683068045
+    },
+    {
+      "horizon": 2,
+      "target_month": "2026-08-01",
+      "n_pairs": 17253,
+      "n_base_sku": 1447,
+      "n_branch": 58,
+      "forecast_sum_m2": 396152.26962784835,
+      "forecast_mean_m2": 22.961355684683728,
+      "mean_p_positive": 0.2629215285641434,
+      "mean_positive_quantity_m2": 62.67124333768746
+    },
+    {
+      "horizon": 3,
+      "target_month": "2026-09-01",
+      "n_pairs": 17253,
+      "n_base_sku": 1447,
+      "n_branch": 58,
+      "forecast_sum_m2": 318297.385403727,
+      "forecast_mean_m2": 18.448813852879326,
+      "mean_p_positive": 0.236268583265718,
+      "mean_positive_quantity_m2": 57.685761931318204
+    }
+  ],
+  "devices": [
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "iteration_selection"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 1,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 139
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "iteration_selection"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 1,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 184
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "iteration_selection"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 2,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 108
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "iteration_selection"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 2,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 148
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "iteration_selection"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 3,
+      "component": "occurrence",
+      "phase": "final_refit",
+      "n_estimators": 95
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "iteration_selection"
+    },
+    {
+      "library": "lightgbm",
+      "requested": "cpu",
+      "actual": "cpu",
+      "fallback_reason": null,
+      "horizon": 3,
+      "component": "positive_quantity",
+      "phase": "final_refit",
+      "n_estimators": 143
+    }
+  ],
+  "safety": {
+    "supabase_accessed": false,
+    "future_actual_labels_read": false,
+    "future_actual_labels_used_for_fit_or_calibration": false,
+    "pair_panel_max_month_equals_forecast_origin": true,
+    "production_universe_current_active_known_pair_only": true,
+    "hard_zero_threshold_used": false,
+    "posthoc_global_bias_scaling_used": false,
+    "pair_level_rounding_used": false,
+    "architecture_changed_after_freeze": false,
+    "frozen_test_evaluation_run": false,
+    "production_published": false
+  },
+  "artifacts": {
+    "prediction_parquet": "/content/drive/MyDrive/work9/08_runs/prospective_frozen_forecast_v01_20260815T155226Z/predictions/prospective_frozen_pair_forecast_v01.parquet",
+    "prediction_csv": "/content/drive/MyDrive/work9/08_runs/prospective_frozen_forecast_v01_20260815T155226Z/predictions/prospective_frozen_pair_forecast_v01.csv",
+    "summary_csv": "/content/drive/MyDrive/work9/06_reports/prospective_frozen_forecast/prospective_frozen_forecast_v01_20260815T155226Z/prospective_frozen_forecast_summary.csv",
+    "training_audit_csv": "/content/drive/MyDrive/work9/06_reports/prospective_frozen_forecast/prospective_frozen_forecast_v01_20260815T155226Z/prospective_frozen_training_audit.csv",
+    "reservation_json": "/content/drive/MyDrive/work9/06_reports/prospective_frozen_forecast/prospective_frozen_forecast_v01_20260815T155226Z/prospective_frozen_test_reservation.json",
+    "models_dir": "/content/drive/MyDrive/work9/08_runs/prospective_frozen_forecast_v01_20260815T155226Z/models"
+  },
+  "input_sha256": {
+    "pair_panel": "85c61a2669ceb17f3f03edb1fb9a6dcc1bfc715d5a1bd31204f5d8e367117ae8",
+    "selected_feature_list": "781b2eace75ca2bdb865a521b5541e415f571a5d61955c244d36d4636ea9f867",
+    "model_contract": "019440ff50d1280691c1405de54951510f4debede92cc71b6e36bdb451a8bcca",
+    "frozen_forecast_contract": "477d55eebb668c48d6327f8c76c83ff5136023ee889a825c46f52629248d551f",
+    "architecture_freeze_contract": "f5f06b89ada6c6707f68f9ac8066a5fb0384ead8f45bf958950055414871eb2b",
+    "architecture_freeze_doc": "6199a901be34cf5dda8f24847db67c47989e68132a00b9ec50d8b5f655f065bb"
+  },
+  "output_sha256": {
+    "prediction_parquet": "3dd59e503f3bf59eaa542222a20995aca9af61732eaecb4702e61cb1161f33dc",
+    "prediction_csv": "9d768aefef68fba29b1ab414a2d6be5941bbfeb11f36361aa3b099acebb62c02",
+    "summary_csv": "b2aec391645a00636d44e420dfcbfbfcb6d6dd80249bf855c18a53445d6eb44d",
+    "training_audit_csv": "eb9f0c922cbaad4239c43b85fac55cb73d5b1761f07e3318e0adb6bcdb18cfcd",
+    "reservation_json": "4f34145028a1b72cc52d5974b07de7305711a77aff7d003776610fa6334618f6",
+    "models": {
+      "occurrence_h1_lightgbm.txt": "7099c6d991dbd9a8b7eb03f8bb0030f20df8241516b312419c99d0f5a5e91693",
+      "occurrence_h2_lightgbm.txt": "be67fc97e2f1100c646153287696e857dc05a991950d7f98a369651074690183",
+      "occurrence_h3_lightgbm.txt": "47e84c9ff38235973e5bc173e96a242985c2020235886fbdeb088382ec08cc46",
+      "positive_quantity_h1_lightgbm_tweedie.txt": "151774aad2a85991a2d1579f568c642e7c5f352b916c753af3e80a5f3a066bbb",
+      "positive_quantity_h2_lightgbm_tweedie.txt": "5ccd2c552c1a1aa931cfad2f6b258a250e6931e4eb2ab5ea9b62d1523295942d",
+      "positive_quantity_h3_lightgbm_tweedie.txt": "a0d7a3c363ca1dfb470c587a6e21eee327e2e179d27c03b971b8856e19d60137"
+    }
+  }
+}

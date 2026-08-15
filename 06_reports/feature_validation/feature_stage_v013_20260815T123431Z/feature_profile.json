@@ -1,0 +1,18 @@
+{
+  "run_id": "feature_stage_v013_20260815T123431Z",
+  "pair_rows": 1186159,
+  "branch_rows": 3468,
+  "pair_train_rows_total": 1107295,
+  "pair_train_rows_eligible": 1090317,
+  "pair_validation_rows_total": 78864,
+  "pair_validation_rows_eligible": 77886,
+  "branch_train_rows_total": 3288,
+  "branch_train_rows_eligible": 3288,
+  "branch_validation_rows_total": 180,
+  "branch_validation_rows_eligible": 180,
+  "pair_target_min": "2024-02-01 00:00:00",
+  "pair_target_max": "2026-03-01 00:00:00",
+  "branch_target_min": "2024-02-01 00:00:00",
+  "branch_target_max": "2026-03-01 00:00:00",
+  "frozen_test_touched": false
+}

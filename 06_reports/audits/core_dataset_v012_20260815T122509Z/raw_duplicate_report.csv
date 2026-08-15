@@ -1,0 +1,4 @@
+table,grain,duplicate_rows,duplicate_groups
+raw.master_sku,bravo_sku,0,0
+raw.master_channel,branch_code,0,0
+raw.sales_monthly,bravo_sku × branch_code × unit × month,0,0

@@ -1,0 +1,4 @@
+row_disposition,primary_exclusion_reason,mapping_status,branch_mapping_status,rows,gross_positive_m2,negative_m2
+EXCLUDED,INVALID_STRUCTURE,MAPPED,MAPPED,3008,102416.95,-1838.1
+EXCLUDED,NON_L1,MAPPED,MAPPED,692,241992.56,-1.44
+MODELING_VALID,ELIGIBLE,MAPPED,MAPPED,207587,18606254.85,-120778.41

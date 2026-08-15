@@ -1,0 +1,40 @@
+version: work9_stage_gate_v01
+status: DATASET_V012_PASS_READY_FOR_FEATURE_BUILD
+workspace: /content/drive/MyDrive/work9
+business_rule_revision: known_pair_closed_month_no_sales_row_is_zero
+stage_state:
+  dataset_v012: PASS
+  accepted_dataset_run_id: core_dataset_v012_20260815T122509Z
+  feature_v013: PENDING
+  feature_selection_v04: PENDING
+  pair_modeling_v02: PENDING
+  rolling_backtest_v01: PENDING
+  underforecast_diagnosis_v01: PENDING
+next_stage: feature_build_v013
+authorization:
+  dataset_build: true
+  feature_build: true
+  feature_selection: true
+  pair_modeling: true
+  rolling_backtest: true
+  underforecast_diagnosis: true
+  reconciliation: false
+  freeze: false
+  frozen_test: false
+  production: false
+safety:
+  supabase_select_only: true
+  supabase_write_allowed: false
+  current_status_as_model_feature: false
+  current_status_rewrites_train_history: false
+  work8_runtime_dependency_allowed: false
+  imported_model_artifacts_allowed: false
+  old_run_pointers_allowed: false
+  old_reports_allowed: false
+pointers:
+  dataset: 01_config/current_dataset_run.json
+  feature: 01_config/current_feature_run.json
+  feature_selection: 01_config/current_feature_selection_run.json
+  model_candidate: 01_config/current_model_candidate_run.json
+  rolling_backtest: 01_config/current_rolling_backtest_run.json
+  diagnosis: 01_config/current_underforecast_diagnosis_run.json
